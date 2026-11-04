@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VESTARO | The Art of Dressing Well – Premium Men's Formalwear</title>
+  <meta name="description" content="VESTARO – Modern Gentleman × Italian Tailoring. Discover refined formal shirts, tailored trousers, business blazers, and three-piece suits crafted for the modern gentleman." />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Swiper CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Custom VESTARO Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       STICKY HEADER & NAVIGATION
+       ======================================================================== -->
+  <header class="site-header header-transparent" id="siteHeader">
+    <div class="header-inner">
+      <!-- Left: VESTARO Logo -->
+      <a href="index.html" class="brand-logo" aria-label="VESTARO Home 1">
+        <img src="assets/img/logo.svg" alt="VESTARO – The Art of Dressing Well" />
+      </a>
+
+      <!-- Center: Desktop Navigation (Hidden at <=1024px) -->
+      <nav aria-label="Primary Navigation">
+        <ul class="desktop-nav">
+          <li><a href="index.html" class="nav-link-vestaro active">Home 1</a></li>
+          <li><a href="home-2.html" class="nav-link-vestaro">Home 2</a></li>
+          <li><a href="products.html" class="nav-link-vestaro">Products</a></li>
+          <li><a href="brands.html" class="nav-link-vestaro">Brands</a></li>
+          <li><a href="contact.html" class="nav-link-vestaro">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right: Desktop Actions (Hidden at <=1024px) -->
+      <div class="desktop-actions">
+        <button type="button" class="header-icon-btn js-open-search" aria-label="Search Products" title="Search Catalogue">
+          <i data-lucide="search" style="width:18px;height:18px;"></i>
+        </button>
+        <button type="button" class="header-icon-btn js-open-bag" aria-label="Open Shopping Bag" title="Shopping Bag">
+          <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
+          <span class="bag-count-badge js-bag-count">0</span>
+        </button>
+        <a href="https://wa.me/919820000000?text=Hello%20VESTARO%20Concierge%2C%20I%20would%20like%20to%20enquire%20about%20your%20formalwear%20collection."
+           target="_blank" rel="noopener" class="header-whatsapp-cta">
+          <i data-lucide="message-circle" style="width:15px;height:15px;"></i>
+          <span>WhatsApp Enquiry</span>
+        </a>
+      </div>
+
+      <!-- Right Corner at <=1024px: Hamburger Button -->
+      <button type="button" class="hamburger-btn" id="openMobileMenuBtn" aria-label="Open Navigation Menu" aria-expanded="false">
+        <i data-lucide="menu" style="width:24px;height:24px;"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Off-Canvas Hamburger Menu Drawer (For 360px, 768px, 1024px) -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/img/logo.svg" alt="VESTARO" />
+      </a>
+      <button type="button" class="header-icon-btn" id="closeMobileMenuBtn" aria-label="Close Navigation Menu">
+        <i data-lucide="x" style="width:20px;height:20px;"></i>
+      </button>
+    </div>
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="active">Home 1 – Brand Story</a></li>
+        <li><a href="home-2.html">Home 2 – Fashion Showcase</a></li>
+        <li><a href="products.html">Products Catalogue</a></li>
+        <li><a href="brands.html">Brand Collections</a></li>
+        <li><a href="contact.html">Contact &amp; Store Visit</a></li>
+      </ul>
+      <div class="mobile-drawer-utilities">
+        <button type="button" class="btn-vestaro btn-vestaro-outline-light js-open-search">
+          <i data-lucide="search" style="width:16px;height:16px;"></i> Search Products
+        </button>
+        <button type="button" class="btn-vestaro btn-vestaro-gold js-open-bag">
+          <i data-lucide="shopping-bag" style="width:16px;height:16px;"></i> Shopping Bag (<span class="js-bag-count">0</span>)
+        </button>
+        <a href="https://wa.me/919820000000?text=Hello%20VESTARO%20Concierge%2C%20I%20would%20like%20to%20enquire%20about%20your%20formalwear%20collection."
+           target="_blank" rel="noopener" class="btn-vestaro btn-vestaro-whatsapp">
+          <i data-lucide="message-circle" style="width:16px;height:16px;"></i> WhatsApp Enquiry
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       1. HERO SECTION (Asymmetrical Monochrome Editorial + Film)
+       ======================================================================== -->
+  <section class="hero-section">
+    <video class="hero-bg-media hero-bg-monochrome" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1800&q=85">
+      <source src="videos/5631763-uhd_3840_2160_24fps.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content-wrap">
+      <div class="row g-5 align-items-center">
+        <!-- Left Asymmetrical Typography Column -->
+        <div class="col-lg-7">
+          <span class="eyebrow-tag gsap-hero-reveal">VESTARO • THE ART OF DRESSING WELL</span>
+          <h1 class="hero-title gsap-hero-reveal">Confidence Begins With What You Wear.</h1>
+          <p class="hero-subtitle gsap-hero-reveal">
+            Discover refined formalwear crafted for the modern gentleman. Timeless silhouettes, impeccable fits and effortless sophistication.
+          </p>
+          <div class="btn-group-centered gsap-hero-reveal">
+            <a href="products.html" class="btn-vestaro btn-vestaro-gold">
+              Discover Our Collection
+            </a>
+            <a href="#our-philosophy" class="btn-vestaro btn-vestaro-outline-light">
+              Explore Our Story
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Asymmetrical Editorial Monochrome Portrait Frame -->
+        <div class="col-lg-5">
+          <div class="editorial-asym-frame gsap-hero-reveal">
+            <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=900&q=85">
+              <source src="videos/10319603-uhd_2160_3840_25fps.mp4" type="video/mp4" />
+            </video>
+            <div class="editorial-caption-badge">
+              <span>ATELIER EDITION N° 01</span>
+              <span>MILANO • JERMYN ST</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sartorial Promise Bar (Charles Tyrwhitt & Suitsupply Inspired) -->
+  <div class="sartorial-promise-bar">
+    <div class="sartorial-promise-grid">
+      <div class="sartorial-promise-item">
+        <i data-lucide="award" style="width:17px;height:17px;"></i>
+        <span>Super 130s–150s Biella Merino &amp; 2-Ply Egyptian Cotton</span>
+      </div>
+      <div class="sartorial-promise-item">
+        <i data-lucide="scissors" style="width:17px;height:17px;"></i>
+        <span>Full &amp; Half-Canvas Italian Sartorial Construction</span>
+      </div>
+      <div class="sartorial-promise-item">
+        <i data-lucide="shield-check" style="width:17px;height:17px;"></i>
+        <span>Complimentary In-Store Fitting &amp; WhatsApp Concierge</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       2. OUR PHILOSOPHY SECTION
+       ======================================================================== -->
+  <section id="our-philosophy" class="section-padding section-ivory">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow-tag">OUR PHILOSOPHY</span>
+        <h2>Elegance Is Never Out of Style.</h2>
+        <p>
+          True distinction whispers rather than shouts. At VESTARO, we unite the architectural discipline of British shirtmaking with the fluid grace of Italian tailoring.
+        </p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="philosophy-quote-box">
+            <span class="eyebrow-tag">THE SARTORIAL CREED</span>
+            <h3 class="serif-heading mb-3" style="font-size:2rem;">Crafted for Leaders Who Value Permanence Over Passing Trends</h3>
+            <p class="text-muted mb-4">
+              Every VESTARO garment begins with noble natural fibres—two-ply Egyptian Royal Oxford cotton, West Indian Sea Island poplin, and pure virgin merino wools from Biella's oldest mills.
+            </p>
+            <p class="text-muted mb-4">
+              Whether commanding a morning boardroom, travelling across continents, or attending an evening gala, our garments move effortlessly with your frame while preserving a razor-sharp silhouette.
+            </p>
+            <a href="brands.html" class="btn-vestaro btn-vestaro-dark">Explore House Labels</a>
+          </div>
+        </div>
+
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="row g-4 h-100">
+            <div class="col-md-6">
+              <div class="bg-white border p-3 h-100 d-flex flex-column justify-content-between">
+                <div style="aspect-ratio:4/5;overflow:hidden;margin-bottom:1rem;">
+                  <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;" poster="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=800&q=85">
+                    <source src="videos/10320260-uhd_2160_3840_25fps.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div class="text-center">
+                  <h4 class="serif-heading mb-1" style="font-size:1.35rem;">Precision Architecture</h4>
+                  <p class="small text-muted mb-0">Hand-basted canvases and split-yoke shoulders calibrated to drape naturally.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="bg-white border p-3 h-100 d-flex flex-column justify-content-between">
+                <div style="aspect-ratio:4/5;overflow:hidden;margin-bottom:1rem;">
+                  <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;" poster="https://images.unsplash.com/photo-1593032465175-481ac7f401a0?auto=format&fit=crop&w=800&q=85">
+                    <source src="videos/4651577-uhd_2160_4096_30fps.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div class="text-center">
+                  <h4 class="serif-heading mb-1" style="font-size:1.35rem;">Modern Professional Dressing</h4>
+                  <p class="small text-muted mb-0">Crease-recovery weaves and breathable linings built for 14-hour executive days.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. WHAT DEFINES VESTARO (4 Unique Pillars)
+       ======================================================================== -->
+  <section class="section-padding section-dark">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow-tag">THE FOUR PILLARS</span>
+        <h2>What Defines VESTARO</h2>
+        <p>
+          An uncompromising standard across construction, cloth, silhouette, and longevity.
+        </p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="50">
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">
+              <i data-lucide="scissors" style="width:26px;height:26px;"></i>
+            </div>
+            <h3 class="serif-heading text-light mb-2" style="font-size:1.55rem;">Refined Tailoring</h3>
+            <p class="small mb-0" style="color:#D9D7D2;">
+              Floating horsehair chest canvases, hand-rolled lapels, and working surgeon's cuffs crafted with 22 stitches per inch for enduring structure.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">
+              <i data-lucide="layers" style="width:26px;height:26px;"></i>
+            </div>
+            <h3 class="serif-heading text-light mb-2" style="font-size:1.55rem;">Premium Fabrics</h3>
+            <p class="small mb-0" style="color:#D9D7D2;">
+              Sourced from venerable European and Egyptian mills: Super 150s merino wool, cavalry twill, two-ply Royal Oxford cotton, and seven-fold Como silk.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="150">
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">
+              <i data-lucide="ruler" style="width:26px;height:26px;"></i>
+            </div>
+            <h3 class="serif-heading text-light mb-2" style="font-size:1.55rem;">Exceptional Fit</h3>
+            <p class="small mb-0" style="color:#D9D7D2;">
+              Engineered across Slim Fit and Regular Fit blocks with high armholes and tapered waists that flatter without restricting natural movement.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="pillar-card">
+            <div class="pillar-icon-wrap">
+              <i data-lucide="compass" style="width:26px;height:26px;"></i>
+            </div>
+            <h3 class="serif-heading text-light mb-2" style="font-size:1.55rem;">Timeless Design</h3>
+            <p class="small mb-0" style="color:#D9D7D2;">
+              Balanced lapel proportions, classic spread collars, and a disciplined palette of midnight black, charcoal, navy, and warm ivory that transcends seasons.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. SIGNATURE COLLECTION (4 Featured Categories)
+       ======================================================================== -->
+  <section class="section-padding section-ivory">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow-tag">CURATED WARDROBE</span>
+        <h2>Signature Collection</h2>
+        <p>
+          Explore our four foundational pillars of formal dressing, each tailored with sartorial precision.
+        </p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Category 1: Formal Shirts -->
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
+          <article class="signature-cat-card">
+            <div class="signature-cat-media">
+              <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&h=1000&q=85"
+                   alt="Formal Shirts"
+                   loading="lazy"
+                   onerror="this.onerror=null;this.src=window.getVestaroFallbackImg('Formal Shirts');" />
+            </div>
+            <div class="signature-cat-body">
+              <span class="eyebrow-tag mb-1">JERMYN HERITAGE</span>
+              <h3 class="serif-heading mb-2" style="font-size:1.55rem;">Formal Shirts</h3>
+              <p class="small text-muted mb-3">Non-iron Royal Oxford, Sea Island poplin &amp; micro-herringbone weaves with brass collar stays.</p>
+              <a href="products.html?category=Formal+Shirts" class="btn-vestaro btn-vestaro-dark mt-auto w-100">Explore Shirts</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Category 2: Tailored Trousers -->
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <article class="signature-cat-card">
+            <div class="signature-cat-media">
+              <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=800&h=1000&q=85"
+                   alt="Tailored Trousers"
+                   loading="lazy"
+                   onerror="this.onerror=null;this.src=window.getVestaroFallbackImg('Tailored Trousers');" />
+            </div>
+            <div class="signature-cat-body">
+              <span class="eyebrow-tag mb-1">BIELLA MERINO</span>
+              <h3 class="serif-heading mb-2" style="font-size:1.55rem;">Tailored Trousers</h3>
+              <p class="small text-muted mb-3">Pleated Super 120s wool, Gurkha waistbands, and crease-resistant cavalry twill trousers.</p>
+              <a href="products.html?category=Formal+Trousers" class="btn-vestaro btn-vestaro-dark mt-auto w-100">Explore Trousers</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Category 3: Business Blazers -->
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+          <article class="signature-cat-card">
+            <div class="signature-cat-media">
+              <img src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=800&h=1000&q=85"
+                   alt="Business Blazers"
+                   loading="lazy"
+                   onerror="this.onerror=null;this.src=window.getVestaroFallbackImg('Business Blazers');" />
+            </div>
+            <div class="signature-cat-body">
+              <span class="eyebrow-tag mb-1">NEAPOLITAN CUT</span>
+              <h3 class="serif-heading mb-2" style="font-size:1.55rem;">Business Blazers</h3>
+              <p class="small text-muted mb-3">Vitale Barberis hopsack single-breasted jackets and double-breasted club blazers.</p>
+              <a href="products.html?category=Blazers" class="btn-vestaro btn-vestaro-dark mt-auto w-100">Explore Blazers</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Category 4: Three-Piece Suits -->
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <article class="signature-cat-card">
+            <div class="signature-cat-media">
+              <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&h=1000&q=85"
+                   alt="Three-Piece Suits"
+                   loading="lazy"
+                   onerror="this.onerror=null;this.src=window.getVestaroFallbackImg('Three-Piece Suits');" />
+            </div>
+            <div class="signature-cat-body">
+              <span class="eyebrow-tag mb-1">FULL-CANVAS</span>
+              <h3 class="serif-heading mb-2" style="font-size:1.55rem;">Three-Piece Suits</h3>
+              <p class="small text-muted mb-3">Commanding Super 150s three-piece ensembles with sculpted waistcoats and hand-finished lapels.</p>
+              <a href="products.html?category=Business+Suits" class="btn-vestaro btn-vestaro-dark mt-auto w-100">Explore Suits</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. THE MODERN GENTLEMAN (Editorial Feature Section)
+       ======================================================================== -->
+  <section class="section-padding section-white">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="position-relative border p-2" style="background:#111214;">
+            <video autoplay muted loop playsinline style="width:100%;aspect-ratio:16/10;object-fit:cover;" poster="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=85">
+              <source src="videos/6099468-uhd_4096_2160_30fps.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center" data-aos="fade-left">
+          <span class="eyebrow-tag">EDITORIAL PORTRAIT</span>
+          <h2 class="serif-heading mb-3" style="font-size:clamp(2rem,3.3vw,3rem);">The Modern Gentleman</h2>
+          <p class="text-muted mb-4">
+            Today's executive navigates a world that demands adaptability without sacrificing poise. From high-level financial summits and legal chambers to evening diplomatic receptions, your attire serves as your silent introduction.
+          </p>
+          <div class="row g-3 mb-4">
+            <div class="col-sm-4">
+              <div class="p-3 border bg-light h-100">
+                <h4 class="serif-heading mb-1" style="font-size:1.25rem;">The Boardroom</h4>
+                <p class="small text-muted mb-0">Chalkstripe &amp; sharkskin suits paired with crisp non-iron Royal Oxford shirts.</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="p-3 border bg-light h-100">
+                <h4 class="serif-heading mb-1" style="font-size:1.25rem;">Executive Travel</h4>
+                <p class="small text-muted mb-0">High-twist hopsack blazers &amp; cavalry twill trousers that resist creasing in transit.</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="p-3 border bg-light h-100">
+                <h4 class="serif-heading mb-1" style="font-size:1.25rem;">Formal Occasions</h4>
+                <p class="small text-muted mb-0">Three-piece midnight tailoring, double-breasted waistcoats &amp; 7-fold Como silk ties.</p>
+              </div>
+            </div>
+          </div>
+          <div class="btn-group-centered">
+            <a href="home-2.html" class="btn-vestaro btn-vestaro-dark">View Lookbook Showcase</a>
+            <a href="contact.html" class="btn-vestaro btn-vestaro-outline-dark">Book Private Fitting</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. CRAFTSMANSHIP SECTION (Textures, Stitching, Collars, Cuffs)
+       ======================================================================== -->
+  <section class="section-padding section-dark">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow-tag">ATELIER SAVOIR-FAIRE</span>
+        <h2>Uncompromising Craftsmanship</h2>
+        <p>
+          Every seam, collar interlining, and horn button is inspected by master tailors to guarantee generational quality.
+        </p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
+          <div class="craft-detail-card">
+            <div class="craft-detail-media">
+              <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=85">
+                <source src="videos/4651610-uhd_2160_4096_30fps.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="craft-detail-body">
+              <span class="eyebrow-tag mb-1">01 • NOBLE CLOTH</span>
+              <h3 class="serif-heading text-light mb-2" style="font-size:1.4rem;">Fine Fabric Textures</h3>
+              <p class="small mb-0" style="color:#D9D7D2;">
+                High-twist Super 130s–150s Biella merino wools and two-ply Egyptian cotton weaves with natural lustre.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="craft-detail-card">
+            <div class="craft-detail-media">
+              <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=85">
+                <source src="videos/8939335-hd_1920_1080_25fps.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="craft-detail-body">
+              <span class="eyebrow-tag mb-1">02 • PICK STITCHING</span>
+              <h3 class="serif-heading text-light mb-2" style="font-size:1.4rem;">Hand-Stitched Lapels</h3>
+              <p class="small mb-0" style="color:#D9D7D2;">
+                Subtle Milanese AMF pick-stitching along lapel edges and pocket flaps prevents curling and adds artisanal depth.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+          <div class="craft-detail-card">
+            <div class="craft-detail-media">
+              <img src="https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?auto=format&fit=crop&w=800&q=85"
+                   alt="Structured Shirt Collars & Brass Stays"
+                   loading="lazy" />
+            </div>
+            <div class="craft-detail-body">
+              <span class="eyebrow-tag mb-1">03 • COLLAR ARCHITECTURE</span>
+              <h3 class="serif-heading text-light mb-2" style="font-size:1.4rem;">Sculpted Shirt Collars</h3>
+              <p class="small mb-0" style="color:#D9D7D2;">
+                Multi-layer fused and unfused cotton interlinings paired with complimentary rhodium-plated brass collar stays.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="craft-detail-card">
+            <div class="craft-detail-media">
+              <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&w=800&q=85"
+                   alt="Surgeon Cuffs & French Double Cuffs"
+                   loading="lazy" />
+            </div>
+            <div class="craft-detail-body">
+              <span class="eyebrow-tag mb-1">04 • CUFF PRECISION</span>
+              <h3 class="serif-heading text-light mb-2" style="font-size:1.4rem;">Surgeon &amp; French Cuffs</h3>
+              <p class="small mb-0" style="color:#D9D7D2;">
+                Working four-button surgeon's cuffs on all blazers and crisp French double cuffs ready for onyx cufflinks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. FINAL CALL TO ACTION
+       ======================================================================== -->
+  <section class="section-padding section-charcoal position-relative overflow-hidden">
+    <div class="container text-center position-relative" style="z-index:2;" data-aos="zoom-in">
+      <span class="eyebrow-tag">THE VESTARO INVITATION</span>
+      <h2 class="serif-heading text-light mb-3" style="font-size:clamp(2.2rem,4vw,3.6rem);">
+        Dress With Purpose. Lead With Confidence.
+      </h2>
+      <p class="mx-auto mb-4" style="max-width:620px;color:#D9D7D2;">
+        Step into our complete formalwear catalogue of shirts, trousers, blazers, three-piece suits, and artisanal accessories.
+      </p>
+      <div class="btn-group-centered">
+        <a href="products.html" class="btn-vestaro btn-vestaro-gold">Explore Collection</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. PREMIUM DARK FOOTER (Section 13)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 pb-4 border-bottom" style="border-color:rgba(185,154,101,0.2) !important;">
+        <!-- Col 1: Brand Identity -->
+        <div class="col-lg-4">
+          <a href="index.html" class="brand-logo mb-3">
+            <img src="assets/img/logo.svg" alt="VESTARO" />
+          </a>
+          <p class="small mb-3" style="color:#D9D7D2;max-width:340px;">
+            <strong>VESTARO – The Art of Dressing Well.</strong><br />
+            Purveyors of luxury men's formalwear uniting British Jermyn Street shirtmaking with Italian full-canvas tailoring.
+          </p>
+          <div class="social-icons-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Instagram" title="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Facebook" title="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Pinterest" title="Pinterest">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 20l4-9"/><path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75-1.554 3.75-4a5 5 0 1 0-9.7 1.7"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="YouTube" title="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9 10 15"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 – Brand Story</a></li>
+            <li><a href="home-2.html">Home 2 – Showcase</a></li>
+            <li><a href="products.html">Products Catalogue</a></li>
+            <li><a href="brands.html">Brand Collections</a></li>
+            <li><a href="contact.html">Store Visit &amp; Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Product Categories -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="products.html?category=Formal+Shirts">Formal Shirts</a></li>
+            <li><a href="products.html?category=Formal+Trousers">Formal Trousers</a></li>
+            <li><a href="products.html?category=Blazers">Business Blazers</a></li>
+            <li><a href="products.html?category=Business+Suits">Business Suits</a></li>
+            <li><a href="products.html?category=Waistcoats">Waistcoats</a></li>
+            <li><a href="products.html?category=Formal+Accessories">Formal Accessories</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Featured Brands -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">House Brands</h4>
+          <ul class="footer-links">
+            <li><a href="brands.html#vestaro-signature">VESTARO Signature</a></li>
+            <li><a href="brands.html#the-executive-edit">The Executive Edit</a></li>
+            <li><a href="brands.html#classic-tailors">Classic Tailors</a></li>
+            <li><a href="brands.html#urban-gentleman">Urban Gentleman</a></li>
+            <li><a href="brands.html#heritage-formal">Heritage Formal</a></li>
+            <li><a href="brands.html#modern-office-collection">Modern Office</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Store Contact & Newsletter -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Flagship Boutique</h4>
+          <p class="small mb-2" style="color:#D9D7D2;">
+            Suite 104, The Heritage Arcade, Luxury Retail Boulevard
+          </p>
+          <p class="small mb-2" style="color:#D9D7D2;">
+            Tel: <a href="tel:+912267894321" style="color:#B99A65;">+91 (022) 6789-4321</a>
+          </p>
+          <p class="small mb-3" style="color:#D9D7D2;">
+            Email: <a href="mailto:concierge@vestaro.in" style="color:#B99A65;">concierge@vestaro.in</a>
+          </p>
+          <form class="js-newsletter-form">
+            <label class="small d-block mb-1" style="color:#B99A65;font-size:0.72rem;letter-spacing:0.1em;">THE SARTORIAL JOURNAL</label>
+            <div class="input-group input-group-sm">
+              <input type="email" class="form-control rounded-0 border-secondary bg-dark text-light" placeholder="Your email" required />
+              <button class="btn rounded-0" style="background:#B99A65;color:#111214;font-weight:700;" type="submit">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small" style="color:#8F9198;">
+        <div>&copy; 2026 VESTARO Menswear Atelier. All Rights Reserved.</div>
+        <div>Designed for Modern Gentlemen • Suitable for GitHub Pages Deployment</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: jQuery, Bootstrap 5, GSAP + ScrollTrigger, Swiper, AOS, Lucide -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/products-data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

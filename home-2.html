@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VESTARO | Home 2 – Fashion &amp; Collection Showcase</title>
+  <meta name="description" content="Make Every Entrance Count. Explore VESTARO's seasonal fashion campaign, category panels, new arrivals, office essentials, and sartorial pairings." />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Swiper CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Custom VESTARO Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       STICKY HEADER & NAVIGATION
+       ======================================================================== -->
+  <header class="site-header header-transparent" id="siteHeader">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo" aria-label="VESTARO Home 1">
+        <img src="assets/img/logo.svg" alt="VESTARO – The Art of Dressing Well" />
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="desktop-nav">
+          <li><a href="index.html" class="nav-link-vestaro">Home 1</a></li>
+          <li><a href="home-2.html" class="nav-link-vestaro active">Home 2</a></li>
+          <li><a href="products.html" class="nav-link-vestaro">Products</a></li>
+          <li><a href="brands.html" class="nav-link-vestaro">Brands</a></li>
+          <li><a href="contact.html" class="nav-link-vestaro">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="desktop-actions">
+        <button type="button" class="header-icon-btn js-open-search" aria-label="Search Products">
+          <i data-lucide="search" style="width:18px;height:18px;"></i>
+        </button>
+        <button type="button" class="header-icon-btn js-open-bag" aria-label="Open Shopping Bag">
+          <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
+          <span class="bag-count-badge js-bag-count">0</span>
+        </button>
+        <a href="https://wa.me/919820000000?text=Hello%20VESTARO%20Concierge%2C%20I%20would%20like%20to%20enquire%20about%20your%20latest%20collection."
+           target="_blank" rel="noopener" class="header-whatsapp-cta">
+          <i data-lucide="message-circle" style="width:15px;height:15px;"></i>
+          <span>WhatsApp Enquiry</span>
+        </a>
+      </div>
+
+      <button type="button" class="hamburger-btn" id="openMobileMenuBtn" aria-label="Open Navigation Menu" aria-expanded="false">
+        <i data-lucide="menu" style="width:24px;height:24px;"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Off-Canvas Hamburger Menu Drawer (For 360px, 768px, 1024px) -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/img/logo.svg" alt="VESTARO" />
+      </a>
+      <button type="button" class="header-icon-btn" id="closeMobileMenuBtn" aria-label="Close Navigation Menu">
+        <i data-lucide="x" style="width:20px;height:20px;"></i>
+      </button>
+    </div>
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">Home 1 – Brand Story</a></li>
+        <li><a href="home-2.html" class="active">Home 2 – Fashion Showcase</a></li>
+        <li><a href="products.html">Products Catalogue</a></li>
+        <li><a href="brands.html">Brand Collections</a></li>
+        <li><a href="contact.html">Contact &amp; Store Visit</a></li>
+      </ul>
+      <div class="mobile-drawer-utilities">
+        <button type="button" class="btn-vestaro btn-vestaro-outline-light js-open-search">
+          <i data-lucide="search" style="width:16px;height:16px;"></i> Search Products
+        </button>
+        <button type="button" class="btn-vestaro btn-vestaro-gold js-open-bag">
+          <i data-lucide="shopping-bag" style="width:16px;height:16px;"></i> Shopping Bag (<span class="js-bag-count">0</span>)
+        </button>
+        <a href="https://wa.me/919820000000?text=Hello%20VESTARO%20Concierge%2C%20I%20would%20like%20to%20enquire%20about%20your%20latest%20collection."
+           target="_blank" rel="noopener" class="btn-vestaro btn-vestaro-whatsapp">
+          <i data-lucide="message-circle" style="width:16px;height:16px;"></i> WhatsApp Enquiry
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       1. HERO SECTION (Full-Screen Fashion Campaign Showcase – Distinct from Home 1)
+       ======================================================================== -->
+  <section class="hero-section">
+    <video class="hero-bg-media" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1800&q=85">
+      <source src="videos/6764981-uhd_3840_2160_25fps.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay" style="background:radial-gradient(circle at center, rgba(17,18,20,0.68) 0%, rgba(17,18,20,0.92) 100%);"></div>
+
+    <div class="container hero-content-wrap text-center">
+      <div class="mx-auto" style="max-width:860px;">
+        <span class="eyebrow-tag gsap-hero-reveal">SEASONAL CAMPAIGN • LOOKBOOK EDITION</span>
+        <h1 class="hero-title gsap-hero-reveal">Make Every Entrance Count.</h1>
+        <p class="hero-subtitle gsap-hero-reveal">
+          From boardroom essentials to refined evening attire, find your signature style.
+        </p>
+        <div class="btn-group-centered gsap-hero-reveal mb-5">
+          <a href="products.html?category=Formal+Shirts" class="btn-vestaro btn-vestaro-gold">
+            Shop Shirts
+          </a>
+          <a href="products.html?category=Formal+Trousers" class="btn-vestaro btn-vestaro-outline-light">
+            Shop Trousers
+          </a>
+        </div>
+      </div>
+
+      <!-- Campaign Lookbook Triptych Strip -->
+      <div class="row g-3 justify-content-center gsap-hero-reveal">
+        <div class="col-md-4">
+          <div class="p-3 border" style="background:rgba(17,18,20,0.78);border-color:rgba(185,154,101,0.35) !important;">
+            <span class="eyebrow-tag mb-1">JERMYN STREET EDIT</span>
+            <h3 class="serif-heading text-light mb-1" style="font-size:1.35rem;">2-Ply Non-Iron Shirts</h3>
+            <p class="small mb-0" style="color:#D9D7D2;">Royal Oxford, Sea Island Poplin &amp; Herringbone</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 border" style="background:rgba(17,18,20,0.78);border-color:rgba(185,154,101,0.35) !important;">
+            <span class="eyebrow-tag mb-1">MILANESE TAILORING</span>
+            <h3 class="serif-heading text-light mb-1" style="font-size:1.35rem;">Super 150s Suits &amp; Blazers</h3>
+            <p class="small mb-0" style="color:#D9D7D2;">Full-Canvas Drape &amp; Surgeon's Cuffs</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 border" style="background:rgba(17,18,20,0.78);border-color:rgba(185,154,101,0.35) !important;">
+            <span class="eyebrow-tag mb-1">COMPLETE ENSEMBLES</span>
+            <h3 class="serif-heading text-light mb-1" style="font-size:1.35rem;">Waistcoats &amp; Accessories</h3>
+            <p class="small mb-0" style="color:#D9D7D2;">7-Fold Como Silk Ties &amp; Goodyear Oxfords</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       2. SHOP BY CATEGORY (6 Large Photographic Asymmetric Category Panels)
+       ======================================================================== -->
+  <section class="section-padding section-ivory">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow-tag">CURATED DEPARTMENTS</span>
+        <h2>Shop By Category</h2>
+        <p>
+          Navigate our six specialized formalwear departments presented through large-scale editorial panels.
+        </p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <!-- Asymmetric Large Editorial Panel Grid (6 Categories) -->
+      <div class="row g-4">
+        <!-- 1. Formal Shirts (Wide Panel 7 cols) -->
+        <div class="col-lg-7" data-aos="fade-up">
+          <article class="category-editorial-panel">
+            <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1200&q=85" alt="Formal Shirts" loading="lazy" />
+            <div class="category-panel-overlay">
+              <span class="eyebrow-tag mb-1">DEPARTMENT 01</span>
+              <h3 class="serif-heading text-light mb-2" style="font-size:2.1rem;">Formal Shirts</h3>
+              <p class="small mb-3" style="color:#D9D7D2;max-width:460px;">
+                Crisp two-ply Egyptian cotton poplin, Royal Oxford, and micro-herringbone shirts in Slim and Regular fits.
+              </p>
+              <a href="products.html?category=Formal+Shirts" class="btn-vestaro btn-vestaro-gold">Explore Shirts</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- 2. Formal Trousers (5 cols) -->
+        <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+          <article class="category-editorial-panel">
+            <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=800&h=1000&q=85" alt="Formal Trousers" loading="lazy" />
+            <div class="category-panel-overlay">
+              <span class="eyebrow-tag mb-1">DEPARTMENT 02</span>
+              <h3 class="serif-heading text-light mb-2" style="font-size:2.1rem;">Formal Trousers</h3>
+              <p class="small mb-3" style="color:#D9D7D2;max-width:380px;">
+                Pleated Biella wool, cavalry twill, and double-buckle Gurkha trousers.
+              </p>
+              <a href="products.html?category=Formal+Trousers" class="btn-vestaro btn-vestaro-outline-light">Explore Trousers</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- 3. Blazers (4 cols) -->
+        <div class="col-lg-4" data-aos="fade-up">
+          <article class="category-editorial-panel">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=85" alt="Blazers" loading="lazy" />
+            <div class="category-panel-overlay">
+              <span class="eyebrow-tag mb-1">DEPARTMENT 03</span>
+              <h3 class="serif-heading text-light mb-2" style="font-size:1.95rem;">Blazers</h3>
+              <p class="small mb-3" style="color:#D9D7D2;">
+                Neapolitan hopsack and double-breasted club blazers.
+              </p>
+              <a href="products.html?category=Blazers" class="btn-vestaro btn-vestaro-gold">Explore Blazers</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- 4. Business Suits (4 cols with local UHD video) -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <article class="category-editorial-panel">
+            <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=900&q=85">
+              <source src="videos/11930437_2160_3840_50fps.mp4" type="video/mp4" />
+            </video>
+            <div class="category-panel-overlay">
+              <span class="eyebrow-tag mb-1">DEPARTMENT 04</span>
+              <h3 class="serif-heading text-light mb-2" style="font-size:1.95rem;">Business Suits</h3>
+              <p class="small mb-3" style="color:#D9D7D2;">
+                Full-canvas two-piece and three-piece Super 150s wool suits.
+              </p>
+              <a href="products.html?category=Business+Suits" class="btn-vestaro btn-vestaro-gold">Explore Suits</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- 5. Waistcoats (4 cols) -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+          <article class="category-editorial-panel">
+            <img src="https://images.unsplash.com/photo-1555069519-127aadedf1ee?auto=format&fit=crop&w=900&q=85" alt="Waistcoats" loading="lazy" />
+            <div class="category-panel-overlay">
+              <span class="eyebrow-tag mb-1">DEPARTMENT 05</span>
+              <h3 class="serif-heading text-light mb-2" style="font-size:1.95rem;">Waistcoats</h3>
+              <p class="small mb-3" style="color:#D9D7D2;">
+                Horseshoe shawl-lapel and herringbone wool-silk waistcoats.
+              </p>
+              <a href="products.html?category=Waistcoats" class="btn-vestaro btn-vestaro-outline-light">Explore Waistcoats</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- 6. Formal Accessories (Full-Width Panoramic Panel 12 cols) -->
+        <div class="col-12" data-aos="fade-up">
+          <article class="category-editorial-panel" style="min-height:340px;">
+            <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=1600&q=85" alt="Formal Accessories" loading="lazy" />
+            <div class="category-panel-overlay">
+              <span class="eyebrow-tag mb-1">DEPARTMENT 06 • FINISHING TOUCHES</span>
+              <h3 class="serif-heading text-light mb-2" style="font-size:2.2rem;">Formal Accessories</h3>
+              <p class="small mb-3" style="color:#D9D7D2;max-width:600px;">
+                Seven-fold Como jacquard silk neckties, Florentine calfskin dress belts, onyx cufflinks, and Goodyear-welted Northampton Oxfords.
+              </p>
+              <a href="products.html?category=Formal+Accessories" class="btn-vestaro btn-vestaro-gold">Explore Accessories</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. NEW ARRIVALS (6 Latest Collection Products in ₹)
+       ======================================================================== -->
+  <section class="section-padding section-white">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow-tag">JUST LANDED</span>
+        <h2>New Arrivals</h2>
+        <p>
+          Six newly tailored additions to the VESTARO seasonal repertoire, complete with size selection and instant bag access.
+        </p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <!-- Populated dynamically by main.js initHome2Showcases() -->
+      <div class="row g-4" id="home2NewArrivalsGrid"></div>
+
+      <div class="text-center mt-5">
+        <a href="products.html" class="btn-vestaro btn-vestaro-dark">View All 19+ Sartorial Pieces</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. OFFICE ESSENTIALS (5-Piece Executive Rotation Editorial)
+       ======================================================================== -->
+  <section class="section-padding section-dark">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow-tag">THE MONDAY-TO-FRIDAY CAPSULE</span>
+        <h2>Office Essentials</h2>
+        <p>
+          Five foundational cornerstones of an effortless professional wardrobe, engineered to mix and match across the entire workweek.
+        </p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- 1. Classic White Shirts -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+          <div class="pillar-card h-100">
+            <div class="w-100 mb-3 p-2" style="background:#F5F1E9;height:260px;display:flex;align-items:center;justify-content:center;">
+              <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&h=1000&q=85" alt="Classic White Shirts" style="width:100%;height:100%;object-fit:contain;" />
+            </div>
+            <span class="eyebrow-tag mb-1">ESSENTIAL N° 01</span>
+            <h3 class="serif-heading text-light mb-2" style="font-size:1.5rem;">Classic White Shirts</h3>
+            <p class="small mb-3" style="color:#D9D7D2;">Two-ply Royal Oxford and Sea Island poplin shirts that stay crisp for 14 hours straight.</p>
+            <a href="products.html?category=Formal+Shirts" class="btn-vestaro btn-vestaro-gold mt-auto">Shop White Shirts</a>
+          </div>
+        </div>
+
+        <!-- 2. Light Blue Formal Shirts -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="pillar-card h-100">
+            <div class="w-100 mb-3 p-2" style="background:#F5F1E9;height:260px;display:flex;align-items:center;justify-content:center;">
+              <img src="https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?auto=format&fit=crop&w=800&h=1000&q=85" alt="Light Blue Formal Shirts" style="width:100%;height:100%;object-fit:contain;" />
+            </div>
+            <span class="eyebrow-tag mb-1">ESSENTIAL N° 02</span>
+            <h3 class="serif-heading text-light mb-2" style="font-size:1.5rem;">Light Blue Formal Shirts</h3>
+            <p class="small mb-3" style="color:#D9D7D2;">Mayfair sky-blue micro-herringbone weaves that complement navy and charcoal tailoring.</p>
+            <a href="products.html?category=Slim+Fit+Shirts" class="btn-vestaro btn-vestaro-gold mt-auto">Shop Sky Blue Shirts</a>
+          </div>
+        </div>
+
+        <!-- 3. Navy Trousers -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="pillar-card h-100">
+            <div class="w-100 mb-3 p-2" style="background:#F5F1E9;height:260px;display:flex;align-items:center;justify-content:center;">
+              <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=800&h=1000&q=85" alt="Navy Trousers" style="width:100%;height:100%;object-fit:contain;" />
+            </div>
+            <span class="eyebrow-tag mb-1">ESSENTIAL N° 03</span>
+            <h3 class="serif-heading text-light mb-2" style="font-size:1.5rem;">Navy Trousers</h3>
+            <p class="small mb-3" style="color:#D9D7D2;">Kensington cavalry twill slim trousers with natural crease recovery and shirt-grip waistbands.</p>
+            <a href="products.html?category=Slim+Fit+Trousers" class="btn-vestaro btn-vestaro-gold mt-auto">Shop Navy Trousers</a>
+          </div>
+        </div>
+
+        <!-- 4. Charcoal Trousers -->
+        <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="pillar-card h-100">
+            <div class="w-100 mb-3 p-2" style="background:#F5F1E9;height:260px;display:flex;align-items:center;justify-content:center;">
+              <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=800&h=1000&q=85" alt="Charcoal Trousers" style="width:100%;height:100%;object-fit:contain;" />
+            </div>
+            <span class="eyebrow-tag mb-1">ESSENTIAL N° 04</span>
+            <h3 class="serif-heading text-light mb-2" style="font-size:1.5rem;">Charcoal Trousers</h3>
+            <p class="small mb-3" style="color:#D9D7D2;">Biella Super 120s pleated virgin wool trousers with sartorial side-tab adjusters.</p>
+            <a href="products.html?category=Formal+Trousers" class="btn-vestaro btn-vestaro-gold mt-auto">Shop Charcoal Trousers</a>
+          </div>
+        </div>
+
+        <!-- 5. Black Formal Blazers -->
+        <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="250">
+          <div class="pillar-card h-100">
+            <div class="w-100 mb-3 p-2" style="background:#F5F1E9;height:260px;display:flex;align-items:center;justify-content:center;">
+              <img src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=800&h=1000&q=85" alt="Black Formal Blazers" style="width:100%;height:100%;object-fit:contain;" />
+            </div>
+            <span class="eyebrow-tag mb-1">ESSENTIAL N° 05</span>
+            <h3 class="serif-heading text-light mb-2" style="font-size:1.5rem;">Black Formal Blazers</h3>
+            <p class="small mb-3" style="color:#D9D7D2;">Single and double-breasted midnight black blazers crafted from English barathea and Italian hopsack.</p>
+            <a href="products.html?category=Blazers" class="btn-vestaro btn-vestaro-gold mt-auto">Shop Black Blazers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. THE PERFECT PAIRING (Matching Shirts, Trousers, Belts & Shoes)
+       ======================================================================== -->
+  <section class="section-padding section-ivory">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow-tag">STYLIST CURATION</span>
+        <h2>The Perfect Pairing</h2>
+        <p>
+          Harmonized head-to-toe ensembles combining shirts, tailored trousers, calfskin belts, and Goodyear-welted shoes.
+        </p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Look 1 -->
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="pairing-look-card">
+            <span class="eyebrow-tag">ENSEMBLE 01 • THE CHAIRMAN'S STANDARD</span>
+            <h3 class="serif-heading mb-2" style="font-size:1.8rem;">Royal Oxford White × Charcoal Merino × Black Calfskin</h3>
+            <p class="small text-muted mb-4">
+              Unbeatable boardroom authority. Crisp white diamond-weave shirt paired with pleated Super 120s charcoal wool trousers and black cap-toe Oxfords.
+            </p>
+            <div class="pairing-items-grid">
+              <div class="pairing-mini-slot">
+                <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=600&h=750&q=80" alt="Jermyn Royal Oxford Shirt" />
+                <strong class="small">Jermyn White Shirt</strong>
+                <span class="small text-muted">₹4,490</span>
+              </div>
+              <div class="pairing-mini-slot">
+                <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=600&h=750&q=80" alt="Biella Charcoal Trousers" />
+                <strong class="small">Biella Charcoal Trousers</strong>
+                <span class="small text-muted">₹7,890</span>
+              </div>
+              <div class="pairing-mini-slot">
+                <img src="https://images.unsplash.com/photo-1624222247344-550fb60583dc?auto=format&fit=crop&w=600&h=750&q=80" alt="Florentine Dress Belt" />
+                <strong class="small">Florentine Calf Belt</strong>
+                <span class="small text-muted">₹4,990</span>
+              </div>
+              <div class="pairing-mini-slot">
+                <img src="https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&w=600&h=750&q=80" alt="Northampton Black Oxfords" />
+                <strong class="small">Northampton Oxfords</strong>
+                <span class="small text-muted">₹14,990</span>
+              </div>
+            </div>
+            <div class="btn-group-centered w-100 mt-auto">
+              <button type="button" class="btn-vestaro btn-vestaro-dark" onclick="window.addToShoppingBag('vst-001');window.addToShoppingBag('vst-005');">
+                Add Shirt &amp; Trouser Pair (₹12,380)
+              </button>
+              <a href="products.html" class="btn-vestaro btn-vestaro-outline-dark">Customize Look</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Look 2 -->
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="pairing-look-card">
+            <span class="eyebrow-tag">ENSEMBLE 02 • MILANESE DIPLOMAT</span>
+            <h3 class="serif-heading mb-2" style="font-size:1.8rem;">Sky Herringbone × Navy Cavalry Twill × Champagne Silk</h3>
+            <p class="small text-muted mb-4">
+              Effortless continental elegance. Tapered sky-blue herringbone shirt matched with crease-recovery navy trousers, hopsack blazer, and 7-fold silk tie.
+            </p>
+            <div class="pairing-items-grid">
+              <div class="pairing-mini-slot">
+                <img src="https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?auto=format&fit=crop&w=600&h=750&q=80" alt="Mayfair Sky Blue Shirt" />
+                <strong class="small">Mayfair Sky Shirt</strong>
+                <span class="small text-muted">₹4,790</span>
+              </div>
+              <div class="pairing-mini-slot">
+                <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=600&h=750&q=80" alt="Kensington Navy Trousers" />
+                <strong class="small">Kensington Navy Trousers</strong>
+                <span class="small text-muted">₹6,290</span>
+              </div>
+              <div class="pairing-mini-slot">
+                <img src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=600&h=750&q=80" alt="Brera Hopsack Blazer" />
+                <strong class="small">Brera Navy Blazer</strong>
+                <span class="small text-muted">₹18,990</span>
+              </div>
+              <div class="pairing-mini-slot">
+                <img src="https://images.unsplash.com/photo-1589756823695-278bc923f962?auto=format&fit=crop&w=600&h=750&q=80" alt="Como 7-Fold Silk Tie" />
+                <strong class="small">Como 7-Fold Silk Tie</strong>
+                <span class="small text-muted">₹3,490</span>
+              </div>
+            </div>
+            <div class="btn-group-centered w-100 mt-auto">
+              <button type="button" class="btn-vestaro btn-vestaro-dark" onclick="window.addToShoppingBag('vst-002');window.addToShoppingBag('vst-006');">
+                Add Shirt &amp; Trouser Pair (₹11,080)
+              </button>
+              <a href="products.html" class="btn-vestaro btn-vestaro-outline-dark">Customize Look</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. TRENDING COLLECTION (Swiper.js Horizontal Carousel)
+       ======================================================================== -->
+  <section class="section-padding section-white overflow-hidden">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow-tag">MOST REQUESTED</span>
+        <h2>Trending Collection</h2>
+        <p>
+          Swipe through the most sought-after tailored pieces chosen by VESTARO clientele this season.
+        </p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="d-flex justify-content-center gap-2 mb-4">
+        <button type="button" class="header-icon-btn swiper-btn-prev-vestaro" style="background:#111214;color:#F5F1E9;" aria-label="Previous Slide">
+          <i data-lucide="chevron-left" style="width:20px;height:20px;"></i>
+        </button>
+        <button type="button" class="header-icon-btn swiper-btn-next-vestaro" style="background:#111214;color:#F5F1E9;" aria-label="Next Slide">
+          <i data-lucide="chevron-right" style="width:20px;height:20px;"></i>
+        </button>
+      </div>
+
+      <div class="swiper" id="home2TrendingSwiper">
+        <div class="swiper-wrapper" id="home2TrendingSwiperWrapper"></div>
+        <div class="swiper-pagination swiper-pagination-vestaro position-relative mt-4"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. STYLE INSPIRATION (Editorial Fashion Gallery & UHD Lookbook Reels)
+       ======================================================================== -->
+  <section class="section-padding section-dark">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow-tag">SARTORIAL JOURNAL</span>
+        <h2>Style Inspiration</h2>
+        <p>
+          Motion studies and editorial captures of VESTARO tailoring in metropolitan settings.
+        </p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
+          <div class="border p-2" style="background:#25272B;border-color:rgba(185,154,101,0.3) !important;">
+            <video autoplay muted loop playsinline style="width:100%;aspect-ratio:9/16;object-fit:cover;" poster="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80">
+              <source src="videos/13801231-uhd_2160_3840_24fps.mp4" type="video/mp4" />
+            </video>
+            <div class="p-3 text-center">
+              <span class="eyebrow-tag mb-1">LOOK 01</span>
+              <h3 class="serif-heading text-light mb-0" style="font-size:1.3rem;">The Double-Breasted Silhouette</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="border p-2" style="background:#25272B;border-color:rgba(185,154,101,0.3) !important;">
+            <video autoplay muted loop playsinline style="width:100%;aspect-ratio:9/16;object-fit:cover;" poster="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=700&q=80">
+              <source src="videos/6766334-uhd_2160_3840_25fps.mp4" type="video/mp4" />
+            </video>
+            <div class="p-3 text-center">
+              <span class="eyebrow-tag mb-1">LOOK 02</span>
+              <h3 class="serif-heading text-light mb-0" style="font-size:1.3rem;">Three-Piece Ceremonial Poise</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+          <div class="border p-2" style="background:#25272B;border-color:rgba(185,154,101,0.3) !important;">
+            <video autoplay muted loop playsinline style="width:100%;aspect-ratio:9/16;object-fit:cover;" poster="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=700&q=80">
+              <source src="videos/7647327-uhd_2160_3840_24fps.mp4" type="video/mp4" />
+            </video>
+            <div class="p-3 text-center">
+              <span class="eyebrow-tag mb-1">LOOK 03</span>
+              <h3 class="serif-heading text-light mb-0" style="font-size:1.3rem;">Metropolitan Executive Stride</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="border p-2" style="background:#25272B;border-color:rgba(185,154,101,0.3) !important;">
+            <video autoplay muted loop playsinline style="width:100%;aspect-ratio:9/16;object-fit:cover;" poster="https://images.unsplash.com/photo-1593032465175-481ac7f401a0?auto=format&fit=crop&w=700&q=80">
+              <source src="videos/5520072-hd_1080_1920_30fps.mp4" type="video/mp4" />
+            </video>
+            <div class="p-3 text-center">
+              <span class="eyebrow-tag mb-1">LOOK 04</span>
+              <h3 class="serif-heading text-light mb-0" style="font-size:1.3rem;">Evening Gala Tailoring</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. FINAL CTA
+       ======================================================================== -->
+  <section class="section-padding section-charcoal">
+    <div class="container text-center" data-aos="zoom-in">
+      <span class="eyebrow-tag">SEASONAL EDITION</span>
+      <h2 class="serif-heading text-light mb-3" style="font-size:clamp(2.2rem,4vw,3.6rem);">
+        Your Next Signature Look Awaits.
+      </h2>
+      <p class="mx-auto mb-4" style="max-width:600px;color:#D9D7D2;">
+        Filter by fit, collar size, fabric weave, and house brand in our complete formalwear catalogue.
+      </p>
+      <div class="btn-group-centered">
+        <a href="products.html" class="btn-vestaro btn-vestaro-gold">Shop the Collection</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       9. DARK PREMIUM FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 pb-4 border-bottom" style="border-color:rgba(185,154,101,0.2) !important;">
+        <div class="col-lg-4">
+          <a href="index.html" class="brand-logo mb-3">
+            <img src="assets/img/logo.svg" alt="VESTARO" />
+          </a>
+          <p class="small mb-3" style="color:#D9D7D2;max-width:340px;">
+            <strong>VESTARO – The Art of Dressing Well.</strong><br />
+            Purveyors of luxury men's formalwear uniting British Jermyn Street shirtmaking with Italian full-canvas tailoring.
+          </p>
+          <div class="social-icons-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Instagram" title="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Facebook" title="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Pinterest" title="Pinterest">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 20l4-9"/><path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75-1.554 3.75-4a5 5 0 1 0-9.7 1.7"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="YouTube" title="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9 10 15"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 – Brand Story</a></li>
+            <li><a href="home-2.html">Home 2 – Showcase</a></li>
+            <li><a href="products.html">Products Catalogue</a></li>
+            <li><a href="brands.html">Brand Collections</a></li>
+            <li><a href="contact.html">Store Visit &amp; Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="products.html?category=Formal+Shirts">Formal Shirts</a></li>
+            <li><a href="products.html?category=Formal+Trousers">Formal Trousers</a></li>
+            <li><a href="products.html?category=Blazers">Business Blazers</a></li>
+            <li><a href="products.html?category=Business+Suits">Business Suits</a></li>
+            <li><a href="products.html?category=Waistcoats">Waistcoats</a></li>
+            <li><a href="products.html?category=Formal+Accessories">Formal Accessories</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">House Brands</h4>
+          <ul class="footer-links">
+            <li><a href="brands.html#vestaro-signature">VESTARO Signature</a></li>
+            <li><a href="brands.html#the-executive-edit">The Executive Edit</a></li>
+            <li><a href="brands.html#classic-tailors">Classic Tailors</a></li>
+            <li><a href="brands.html#urban-gentleman">Urban Gentleman</a></li>
+            <li><a href="brands.html#heritage-formal">Heritage Formal</a></li>
+            <li><a href="brands.html#modern-office-collection">Modern Office</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Flagship Boutique</h4>
+          <p class="small mb-2" style="color:#D9D7D2;">
+            Suite 104, The Heritage Arcade, Luxury Retail Boulevard
+          </p>
+          <p class="small mb-2" style="color:#D9D7D2;">
+            Tel: <a href="tel:+912267894321" style="color:#B99A65;">+91 (022) 6789-4321</a>
+          </p>
+          <p class="small mb-3" style="color:#D9D7D2;">
+            Email: <a href="mailto:concierge@vestaro.in" style="color:#B99A65;">concierge@vestaro.in</a>
+          </p>
+          <form class="js-newsletter-form">
+            <label class="small d-block mb-1" style="color:#B99A65;font-size:0.72rem;letter-spacing:0.1em;">THE SARTORIAL JOURNAL</label>
+            <div class="input-group input-group-sm">
+              <input type="email" class="form-control rounded-0 border-secondary bg-dark text-light" placeholder="Your email" required />
+              <button class="btn rounded-0" style="background:#B99A65;color:#111214;font-weight:700;" type="submit">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small" style="color:#8F9198;">
+        <div>&copy; 2026 VESTARO Menswear Atelier. All Rights Reserved.</div>
+        <div>Designed for Modern Gentlemen • Suitable for GitHub Pages Deployment</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/products-data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
