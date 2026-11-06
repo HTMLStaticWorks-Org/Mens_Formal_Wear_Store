@@ -8,12 +8,12 @@
 :root {
   --midnight-black: #111214;
   --charcoal: #25272B;
-  --warm-ivory: #F5F1E9;
+  --warm-ivory: #FFFFFF;
   --champagne-gold: #B99A65;
   --champagne-gold-hover: #A3834E;
-  --soft-grey: #D9D7D2;
+  --soft-grey: #484C54;
   --pure-white: #FFFFFF;
-  --muted-text: #686A70;
+  --muted-text: #5A5D64;
   --border-subtle: rgba(185, 154, 101, 0.24);
   --border-dark: rgba(17, 18, 20, 0.12);
   --font-serif: 'Cormorant Garamond', Georgia, serif;
@@ -35,8 +35,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--warm-ivory);
-  color: var(--midnight-black);
+  background-color: #FFFFFF !important;
+  color: #111214 !important;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -291,7 +291,7 @@ h1,
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: var(--warm-ivory);
+  color: #FFFFFF !important;
   text-align: center;
 }
 
@@ -308,7 +308,7 @@ h1,
 
 .nav-link-vestaro:hover,
 .nav-link-vestaro.active {
-  color: var(--champagne-gold);
+  color: var(--champagne-gold) !important;
 }
 
 .nav-link-vestaro:hover::after,
@@ -327,8 +327,8 @@ h1,
 .header-icon-btn {
   position: relative;
   background: transparent;
-  border: 1px solid rgba(245, 241, 233, 0.22);
-  color: var(--warm-ivory);
+  border: 1px solid rgba(245, 241, 233, 0.28);
+  color: #FFFFFF !important;
   width: 42px;
   height: 42px;
   display: inline-flex;
@@ -340,7 +340,7 @@ h1,
 
 .header-icon-btn:hover {
   border-color: var(--champagne-gold);
-  color: var(--champagne-gold);
+  color: var(--champagne-gold) !important;
 }
 
 .bag-count-badge {
@@ -565,18 +565,20 @@ h1,
 
 .hero-title {
   font-size: clamp(2.4rem, 4.8vw, 4.3rem);
-  color: var(--warm-ivory);
+  color: #FFFFFF !important;
   margin-bottom: 1.15rem;
   text-align: center;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
 }
 
 .hero-subtitle {
   font-size: clamp(0.98rem, 1.3vw, 1.18rem);
-  color: var(--soft-grey);
+  color: #E8E6E2 !important;
   max-width: 660px;
   margin: 0 auto 2.1rem auto;
   font-weight: 300;
   text-align: center;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* Home 1 Asymmetrical Editorial Portrait Frame */
@@ -638,23 +640,55 @@ h1,
 }
 
 .section-ivory {
-  background-color: var(--warm-ivory);
-  color: var(--midnight-black);
+  background-color: #FFFFFF;
+  color: #111214;
 }
 
 .section-white {
-  background-color: var(--pure-white);
-  color: var(--midnight-black);
+  background-color: #FFFFFF;
+  color: #111214;
 }
 
 .section-dark {
-  background-color: var(--midnight-black);
-  color: var(--warm-ivory);
+  background-color: #181A1D;
+  color: #F5F1E9;
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4,
+.section-dark .serif-heading,
+.section-dark .section-header h2 {
+  color: #FFFFFF !important;
+}
+
+.section-dark p,
+.section-dark span,
+.section-dark li,
+.section-dark .section-header p {
+  color: #D9D7D2 !important;
 }
 
 .section-charcoal {
-  background-color: var(--charcoal);
-  color: var(--warm-ivory);
+  background-color: #22252B;
+  color: #F5F1E9;
+}
+
+.section-charcoal h1,
+.section-charcoal h2,
+.section-charcoal h3,
+.section-charcoal h4,
+.section-charcoal .serif-heading,
+.section-charcoal .section-header h2 {
+  color: #FFFFFF !important;
+}
+
+.section-charcoal p,
+.section-charcoal span,
+.section-charcoal li,
+.section-charcoal .section-header p {
+  color: #D9D7D2 !important;
 }
 
 /* Charles Tyrwhitt Inspired Sartorial Promise Ribbon */
@@ -1044,32 +1078,36 @@ h1,
    PRODUCTS PAGE – CHARLES TYRWHITT INSPIRED FILTER & CATALOGUE SYSTEM
    ========================================================================== */
 .category-pills-bar {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.55rem;
   margin-bottom: 1.75rem;
+  width: 100%;
 }
 
 .cat-filter-pill {
-  min-height: 46px;
-  height: auto;
-  padding: 0.55rem 0.5rem;
-  font-size: 0.72rem;
+  min-height: 44px;
+  height: 44px;
+  max-height: 44px;
+  padding: 0 1.25rem;
+  font-size: 0.74rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  line-height: 1.25;
+  line-height: 44px;
   background: var(--pure-white);
   color: var(--midnight-black);
-  border: 1px solid rgba(17, 18, 20, 0.14);
+  border: 1px solid rgba(17, 18, 20, 0.16);
   cursor: pointer;
   transition: var(--transition-luxury);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  white-space: normal;
-  word-break: normal;
+  white-space: nowrap;
+  flex: 0 0 auto;
 }
 
 .cat-filter-pill:hover,
@@ -1181,6 +1219,7 @@ h1,
 
 .philosophy-media-card {
   height: 100%;
+  min-height: 460px;
   display: flex;
   flex-direction: column;
   background: var(--pure-white);
@@ -1189,26 +1228,31 @@ h1,
 }
 
 .philosophy-media-stage {
-  flex: 1 1 auto;
-  min-height: 280px;
+  flex: 1 1 360px;
+  min-height: 360px;
   width: 100%;
   overflow: hidden;
   margin-bottom: 0.85rem;
   position: relative;
+  background: #111214;
 }
 
 .philosophy-media-stage video,
 .philosophy-media-stage img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover !important;
   display: block;
 }
 
 .philosophy-media-caption {
   margin-top: auto;
   text-align: center;
-  padding: 0.25rem;
+  padding: 0.35rem 0.25rem 0.15rem 0.25rem;
+  flex-shrink: 0;
 }
 
 /* Home 2 Hero Lookbook Triptych Cards */
@@ -1761,7 +1805,20 @@ textarea.form-control-vestaro {
   }
 
   .category-pills-bar {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .cat-filter-pill {
+    flex: 1 1 calc(50% - 0.45rem);
+    min-width: 130px;
+    white-space: normal;
+    line-height: 1.2;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.7rem;
+    height: auto;
+    min-height: 42px;
   }
 
   .product-card {
@@ -1791,28 +1848,53 @@ textarea.form-control-vestaro {
   }
 }
 
-/* 768px and 1024px Footer 2x2 Balanced Grid Layout */
+/* 768px and 1024px Footer 2x2 Balanced Grid Layout (Left-Aligned Brand at 1024px) */
 @media (min-width: 768px) and (max-width: 1199.98px) {
   .site-footer .footer-col-brand {
-    text-align: center;
+    text-align: left !important;
     margin-bottom: 2.5rem;
   }
   .site-footer .footer-col-brand .brand-logo,
   .site-footer .footer-col-brand .social-icons-row {
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
   }
   .site-footer .footer-col-brand p {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    text-align: left !important;
     max-width: 540px;
   }
   .site-footer .footer-col-links {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    text-align: left !important;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     margin-bottom: 2rem;
   }
+  .site-footer .footer-col-links .footer-links {
+    align-items: flex-start !important;
+  }
+
+  /* 768px and 1024px: All Three Cards in Row Have Exact Equal Height & Proportions */
+  .hero-triptych-card,
+  .modern-gent-card {
+    min-height: 150px;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.modern-gent-card {
+  height: 100%;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 @media (min-width: 1920px) {
@@ -1957,112 +2039,196 @@ textarea.form-control-vestaro {
 
 /* ==========================================================================
    DARK THEME MODE [data-theme="dark"]
+   Entire website transforms into a cohesive luxury dark grey aesthetic
    ========================================================================== */
-[data-theme="dark"] {
-  --midnight-black: #F5F1E9;
-  --charcoal: #E0DCD3;
-  --warm-ivory: #16181B;
-  --soft-grey: #484C54;
-  --pure-white: #1E2024;
-}
-
 [data-theme="dark"] body {
-  background-color: #111214 !important;
-  color: #E6E4DD !important;
+  background-color: #121316 !important;
+  color: #D9D7D2 !important;
 }
 
-[data-theme="dark"] .site-header {
-  background: #111214 !important;
-  border-bottom: 1px solid rgba(185, 154, 101, 0.25);
+/* ALL in-between sections become rich dark grey / charcoal */
+[data-theme="dark"] section,
+[data-theme="dark"] .section-ivory,
+[data-theme="dark"] .section-white,
+[data-theme="dark"] .section-padding {
+  background-color: #181A1E !important;
+  color: #D9D7D2 !important;
 }
 
-[data-theme="dark"] .section-ivory {
-  background-color: #141619 !important;
-  color: #E6E4DD !important;
+[data-theme="dark"] .section-dark {
+  background-color: #121316 !important;
+  color: #F5F1E9 !important;
 }
 
-[data-theme="dark"] .section-white {
-  background-color: #181A1D !important;
-  color: #E6E4DD !important;
+[data-theme="dark"] .section-charcoal {
+  background-color: #16181C !important;
+  color: #F5F1E9 !important;
 }
 
-[data-theme="dark"] .bg-white {
-  background-color: #1E2024 !important;
-  color: #E6E4DD !important;
+/* Headings in Dark Theme */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] .serif-heading,
+[data-theme="dark"] .section-header h2 {
+  color: #F5F1E9 !important;
 }
 
-[data-theme="dark"] .border {
-  border-color: rgba(185, 154, 101, 0.22) !important;
+/* Paragraphs & Text in Dark Theme */
+[data-theme="dark"] p,
+[data-theme="dark"] span,
+[data-theme="dark"] li,
+[data-theme="dark"] .section-header p {
+  color: #D9D7D2 !important;
 }
 
 [data-theme="dark"] .text-muted {
-  color: #A6A9B0 !important;
+  color: #9FA2A8 !important;
 }
 
+[data-theme="dark"] .eyebrow-tag {
+  color: #B99A65 !important;
+}
+
+/* All Cards, Panels, Containers in Dark Theme */
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .philosophy-quote-box,
+[data-theme="dark"] .philosophy-media-card,
+[data-theme="dark"] .pillar-card,
+[data-theme="dark"] .signature-card,
+[data-theme="dark"] .pairing-look-card,
+[data-theme="dark"] .contact-info-card,
+[data-theme="dark"] .product-card,
+[data-theme="dark"] .product-card-body,
+[data-theme="dark"] .product-details-box,
+[data-theme="dark"] .brand-showcase-card,
+[data-theme="dark"] .catalogue-toolbar,
+[data-theme="dark"] .filter-sidebar-card,
+[data-theme="dark"] .filter-sidebar-drawer,
+[data-theme="dark"] .shopping-bag-drawer,
+[data-theme="dark"] .quick-view-dialog,
+[data-theme="dark"] .search-overlay,
+[data-theme="dark"] .luxury-accordion .accordion-item {
+  background-color: #22252B !important;
+  color: #D9D7D2 !important;
+  border-color: rgba(185, 154, 101, 0.25) !important;
+}
+
+[data-theme="dark"] .pairing-mini-slot {
+  background-color: #1A1D22 !important;
+  border-color: rgba(185, 154, 101, 0.2) !important;
+  color: #D9D7D2 !important;
+}
+
+[data-theme="dark"] .pairing-mini-slot strong {
+  color: #F5F1E9 !important;
+}
+
+[data-theme="dark"] .faq-accordion-btn {
+  background-color: #22252B !important;
+  color: #F5F1E9 !important;
+}
+
+[data-theme="dark"] .faq-accordion-btn:not(.collapsed) {
+  background-color: #282C34 !important;
+  color: var(--champagne-gold) !important;
+}
+
+[data-theme="dark"] .faq-accordion-body {
+  background-color: #1A1D22 !important;
+  color: #D9D7D2 !important;
+}
+
+/* Category Pills in Products Page in Dark Theme */
 [data-theme="dark"] .cat-filter-pill {
-  background: #1E2024;
-  color: #E6E4DD;
-  border-color: rgba(185, 154, 101, 0.25);
+  background-color: #22252B !important;
+  color: #F5F1E9 !important;
+  border-color: rgba(185, 154, 101, 0.28) !important;
 }
 
 [data-theme="dark"] .cat-filter-pill:hover,
 [data-theme="dark"] .cat-filter-pill.active {
-  background: var(--champagne-gold);
-  color: #111214;
-  border-color: var(--champagne-gold);
+  background-color: var(--champagne-gold) !important;
+  color: #111214 !important;
+  border-color: var(--champagne-gold) !important;
 }
 
-[data-theme="dark"] .product-card,
-[data-theme="dark"] .product-details-box,
-[data-theme="dark"] .shopping-bag-drawer,
-[data-theme="dark"] .filter-sidebar-drawer,
-[data-theme="dark"] .quick-view-dialog,
-[data-theme="dark"] .search-overlay,
-[data-theme="dark"] .pairing-look-card,
-[data-theme="dark"] .philosophy-quote-box,
-[data-theme="dark"] .philosophy-media-card,
-[data-theme="dark"] .contact-card-box,
-[data-theme="dark"] .faq-accordion-item,
-[data-theme="dark"] .faq-accordion-btn,
-[data-theme="dark"] .faq-accordion-body {
-  background-color: #1A1D21 !important;
-  color: #E6E4DD !important;
+/* Form inputs & controls in Dark Theme */
+[data-theme="dark"] .form-control-vestaro,
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background-color: #181A1E !important;
+  color: #F5F1E9 !important;
+  border-color: rgba(185, 154, 101, 0.28) !important;
+}
+
+[data-theme="dark"] .form-control-vestaro:focus {
+  border-color: var(--champagne-gold) !important;
+  box-shadow: 0 0 0 3px rgba(185, 154, 101, 0.25) !important;
+}
+
+/* Sizing buttons in Dark Theme */
+[data-theme="dark"] .size-pill-mini,
+[data-theme="dark"] .size-guide-btn,
+[data-theme="dark"] .js-filter-size-btn {
+  background-color: #181A1E !important;
+  color: #F5F1E9 !important;
+  border-color: rgba(185, 154, 101, 0.28) !important;
+}
+
+[data-theme="dark"] .size-pill-mini.active,
+[data-theme="dark"] .js-filter-size-btn.active {
+  background-color: var(--champagne-gold) !important;
+  color: #111214 !important;
+  border-color: var(--champagne-gold) !important;
+}
+
+/* Outlines & Borders in Dark Theme */
+[data-theme="dark"] .border,
+[data-theme="dark"] .border-bottom,
+[data-theme="dark"] .border-top {
   border-color: rgba(185, 154, 101, 0.22) !important;
 }
 
-[data-theme="dark"] .faq-accordion-btn:not(.collapsed) {
-  background: #24272D !important;
-  color: var(--champagne-gold) !important;
-}
-
-[data-theme="dark"] .form-control-vestaro {
-  background-color: #15171A !important;
-  color: #F5F1E9 !important;
-  border-color: rgba(185, 154, 101, 0.25) !important;
-}
-
+/* Buttons in Dark Theme */
 [data-theme="dark"] .btn-vestaro-outline-dark {
-  border-color: var(--champagne-gold);
-  color: var(--champagne-gold);
+  border-color: var(--champagne-gold) !important;
+  color: var(--champagne-gold) !important;
+  background-color: transparent !important;
 }
 
 [data-theme="dark"] .btn-vestaro-outline-dark:hover {
-  background-color: var(--champagne-gold);
-  color: #111214;
+  background-color: var(--champagne-gold) !important;
+  color: #111214 !important;
 }
 
 [data-theme="dark"] .btn-vestaro-dark {
-  background-color: var(--champagne-gold);
-  color: #111214;
+  background-color: var(--champagne-gold) !important;
+  color: #111214 !important;
+  border-color: var(--champagne-gold) !important;
 }
 
 [data-theme="dark"] .btn-vestaro-dark:hover {
-  background-color: #A3844D;
-  color: #111214;
+  background-color: var(--champagne-gold-hover) !important;
+  color: #111214 !important;
+}
+
+/* Sartorial promise bar in Dark Theme */
+[data-theme="dark"] .sartorial-promise-bar {
+  background-color: #1A1D22 !important;
+  border-color: rgba(185, 154, 101, 0.25) !important;
+}
+
+[data-theme="dark"] .sartorial-promise-item {
+  color: #D9D7D2 !important;
 }
 
 [data-theme="dark"] .hero-triptych-card {
-  background: rgba(22, 24, 27, 0.9);
+  background: rgba(22, 24, 27, 0.95) !important;
 }
 
 /* ==========================================================================

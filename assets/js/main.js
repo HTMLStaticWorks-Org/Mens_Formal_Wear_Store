@@ -1121,13 +1121,13 @@
       const isDark = theme === "dark";
       if (isDark) {
         document.documentElement.setAttribute("data-theme", "dark");
-        $(".theme-icon-moon").addClass("d-none");
-        $(".theme-icon-sun").removeClass("d-none");
+        $(".theme-icon-moon").addClass("d-none").css("display", "none");
+        $(".theme-icon-sun").removeClass("d-none").css("display", "inline-block");
         $(".theme-label-text").text("Light Mode");
       } else {
         document.documentElement.removeAttribute("data-theme");
-        $(".theme-icon-moon").removeClass("d-none");
-        $(".theme-icon-sun").addClass("d-none");
+        $(".theme-icon-moon").removeClass("d-none").css("display", "inline-block");
+        $(".theme-icon-sun").addClass("d-none").css("display", "none");
         $(".theme-label-text").text("Dark Mode");
       }
       try { localStorage.setItem(THEME_KEY, theme); } catch(e) {}
