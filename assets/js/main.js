@@ -1138,10 +1138,12 @@
       const isRtl = dir === "rtl";
       if (isRtl) {
         document.documentElement.setAttribute("dir", "rtl");
-        $(".rtl-pill-text, .rtl-label-text").text("LTR");
+        $(".js-rtl-toggle").addClass("active");
+        $(".rtl-label-text").text("LTR Direction");
       } else {
         document.documentElement.removeAttribute("dir");
-        $(".rtl-pill-text, .rtl-label-text").text("RTL");
+        $(".js-rtl-toggle").removeClass("active");
+        $(".rtl-label-text").text("RTL Direction");
       }
       try { localStorage.setItem(DIR_KEY, dir); } catch(e) {}
     }

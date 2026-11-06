@@ -1864,20 +1864,28 @@ textarea.form-control-vestaro {
    ========================================================================== */
 .header-icon-btn.js-rtl-toggle,
 .header-icon-btn.js-theme-toggle {
+  width: 42px;
+  height: 42px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
 }
 
-.rtl-pill-text {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  padding: 0.15rem 0.35rem;
-  border: 1px solid currentColor;
-  border-radius: 2px;
-  line-height: 1;
+.header-icon-btn.js-rtl-toggle svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.25s ease;
+}
+
+.header-icon-btn.js-rtl-toggle:hover svg {
+  transform: scale(1.1);
+}
+
+.header-icon-btn.js-rtl-toggle.active {
+  border-color: var(--champagne-gold);
+  color: var(--champagne-gold);
+  background: rgba(185, 154, 101, 0.15);
 }
 
 /* ==========================================================================
@@ -2062,7 +2070,30 @@ textarea.form-control-vestaro {
    ========================================================================== */
 [dir="rtl"] {
   direction: rtl;
+}
+
+[dir="rtl"] body {
+  direction: rtl;
   text-align: right;
+}
+
+/* Maintain center alignment for explicitly centered components */
+[dir="rtl"] .text-center,
+[dir="rtl"] .section-header,
+[dir="rtl"] .section-header h2,
+[dir="rtl"] .section-header p,
+[dir="rtl"] .hero-content-wrap,
+[dir="rtl"] .hero-title,
+[dir="rtl"] .hero-subtitle,
+[dir="rtl"] .btn-group-centered,
+[dir="rtl"] .philosophy-quote-box,
+[dir="rtl"] .site-footer {
+  text-align: center;
+}
+
+[dir="rtl"] .bag-count-badge {
+  right: auto;
+  left: -5px;
 }
 
 [dir="rtl"] .mobile-menu-drawer,
@@ -2091,12 +2122,26 @@ textarea.form-control-vestaro {
   border-right: 4px solid var(--champagne-gold);
 }
 
+[dir="rtl"] .accordion-button::after {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
 [dir="rtl"] .faq-question {
   text-align: right;
 }
 
 [dir="rtl"] .faq-accordion-body {
   padding: 1.25rem 3.5rem 1.5rem 1.5rem;
+  text-align: right;
+}
+
+[dir="rtl"] .form-control-vestaro,
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select {
+  text-align: right;
+  direction: rtl;
 }
 
 [dir="rtl"] .me-1, [dir="rtl"] .me-2, [dir="rtl"] .me-3 {
