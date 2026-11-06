@@ -128,21 +128,28 @@ h1,
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
-  height: 48px;
+.btn-vestaro {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   min-height: 48px;
-  min-width: 210px;
-  padding: 0 1.65rem;
+  height: auto;
+  min-width: 180px;
+  padding: 0.65rem 1.45rem;
   font-family: var(--font-sans);
   font-size: 0.76rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-align: center;
+  line-height: 1.3;
   border-radius: 0;
   border: 1px solid transparent;
   cursor: pointer;
   transition: var(--transition-luxury);
-  white-space: nowrap;
+  white-space: normal;
+  word-break: normal;
 }
 
 .btn-vestaro-gold {
@@ -1043,18 +1050,20 @@ h1,
    ========================================================================== */
 .category-pills-bar {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 0.5rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.6rem;
   margin-bottom: 1.75rem;
 }
 
 .cat-filter-pill {
-  height: 42px;
-  padding: 0 0.75rem;
-  font-size: 0.71rem;
+  min-height: 46px;
+  height: auto;
+  padding: 0.55rem 0.5rem;
+  font-size: 0.72rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
+  line-height: 1.25;
   background: var(--pure-white);
   color: var(--midnight-black);
   border: 1px solid rgba(17, 18, 20, 0.14);
@@ -1064,9 +1073,8 @@ h1,
   align-items: center;
   justify-content: center;
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: normal;
 }
 
 .cat-filter-pill:hover,
@@ -1174,6 +1182,61 @@ h1,
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.philosophy-media-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--pure-white);
+  border: 1px solid rgba(17, 18, 20, 0.12);
+  padding: 0.85rem;
+}
+
+.philosophy-media-stage {
+  flex: 1 1 auto;
+  min-height: 280px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 0.85rem;
+  position: relative;
+}
+
+.philosophy-media-stage video,
+.philosophy-media-stage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.philosophy-media-caption {
+  margin-top: auto;
+  text-align: center;
+  padding: 0.25rem;
+}
+
+/* Home 2 Hero Lookbook Triptych Cards */
+.hero-triptych-card {
+  height: 100%;
+  min-height: 132px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  background: rgba(17, 18, 20, 0.82);
+  border: 1px solid rgba(185, 154, 101, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: var(--transition-luxury);
+}
+
+.hero-triptych-card:hover {
+  border-color: var(--champagne-gold);
+  background: rgba(17, 18, 20, 0.94);
+  transform: translateY(-3px);
 }
 
 .pillar-card {
@@ -1332,6 +1395,26 @@ h1,
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+}
+
+.pairing-look-card .btn-group-centered {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.65rem;
+}
+
+.pairing-look-card .btn-vestaro {
+  width: 100%;
+  max-width: 100%;
+  min-width: auto;
+  min-height: 48px;
+  height: auto;
+  padding: 0.75rem 1rem;
+  font-size: 0.73rem;
+  line-height: 1.3;
+  white-space: normal;
   text-align: center;
 }
 
@@ -1674,7 +1757,12 @@ textarea.form-control-vestaro {
 
   .btn-vestaro {
     width: 100%;
-    max-width: 310px;
+    max-width: 340px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+    padding: 0.65rem 1rem;
+    font-size: 0.73rem;
   }
 
   .category-pills-bar {
@@ -1708,11 +1796,327 @@ textarea.form-control-vestaro {
   }
 }
 
+/* 768px and 1024px Footer 2x2 Balanced Grid Layout */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .site-footer .footer-col-brand {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .site-footer .footer-col-brand .brand-logo,
+  .site-footer .footer-col-brand .social-icons-row {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .site-footer .footer-col-brand p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 540px;
+  }
+  .site-footer .footer-col-links {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
 @media (min-width: 1920px) {
   .container, .container-xxl {
     max-width: 1640px;
   }
 }
+
+/* ==========================================================================
+   BACK TO TOP FLOATING BUTTON
+   ========================================================================== */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--midnight-black);
+  color: var(--champagne-gold);
+  border: 1.5px solid var(--champagne-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 990;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease, background 0.25s ease, color 0.25s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.back-to-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top-btn:hover {
+  background: var(--champagne-gold);
+  color: var(--midnight-black);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(185, 154, 101, 0.35);
+}
+
+/* ==========================================================================
+   HEADER THEME & RTL BUTTONS
+   ========================================================================== */
+.header-icon-btn.js-rtl-toggle,
+.header-icon-btn.js-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rtl-pill-text {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.15rem 0.35rem;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  line-height: 1;
+}
+
+/* ==========================================================================
+   CONTACT PAGE LUXURY FAQ ACCORDION
+   ========================================================================== */
+.luxury-accordion .accordion-item {
+  background: var(--pure-white);
+  border: 1px solid rgba(17, 18, 20, 0.12);
+  border-radius: 0;
+  transition: var(--transition-luxury);
+  overflow: hidden;
+}
+
+.luxury-accordion .accordion-item:hover {
+  border-color: var(--champagne-gold);
+}
+
+.faq-accordion-btn {
+  background: var(--pure-white);
+  color: var(--midnight-black);
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  padding: 1.35rem 1.5rem;
+  box-shadow: none !important;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.faq-accordion-btn:not(.collapsed) {
+  background: var(--warm-ivory);
+  color: var(--champagne-gold);
+}
+
+.faq-accordion-btn::after {
+  filter: grayscale(1);
+  transition: transform 0.3s ease;
+}
+
+.faq-accordion-btn:not(.collapsed)::after {
+  filter: sepia(1) hue-rotate(5deg) saturate(3);
+}
+
+.faq-num {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--champagne-gold);
+  background: rgba(185, 154, 101, 0.12);
+  padding: 0.25rem 0.6rem;
+  border: 1px solid rgba(185, 154, 101, 0.3);
+  flex-shrink: 0;
+}
+
+.faq-question {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.faq-accordion-body {
+  padding: 1.25rem 1.5rem 1.5rem 3.5rem;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #55575C;
+  background: var(--pure-white);
+}
+
+/* ==========================================================================
+   DARK THEME MODE [data-theme="dark"]
+   ========================================================================== */
+[data-theme="dark"] {
+  --midnight-black: #F5F1E9;
+  --charcoal: #E0DCD3;
+  --warm-ivory: #16181B;
+  --soft-grey: #484C54;
+  --pure-white: #1E2024;
+}
+
+[data-theme="dark"] body {
+  background-color: #111214 !important;
+  color: #E6E4DD !important;
+}
+
+[data-theme="dark"] .site-header {
+  background: #111214 !important;
+  border-bottom: 1px solid rgba(185, 154, 101, 0.25);
+}
+
+[data-theme="dark"] .section-ivory {
+  background-color: #141619 !important;
+  color: #E6E4DD !important;
+}
+
+[data-theme="dark"] .section-white {
+  background-color: #181A1D !important;
+  color: #E6E4DD !important;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: #1E2024 !important;
+  color: #E6E4DD !important;
+}
+
+[data-theme="dark"] .border {
+  border-color: rgba(185, 154, 101, 0.22) !important;
+}
+
+[data-theme="dark"] .text-muted {
+  color: #A6A9B0 !important;
+}
+
+[data-theme="dark"] .cat-filter-pill {
+  background: #1E2024;
+  color: #E6E4DD;
+  border-color: rgba(185, 154, 101, 0.25);
+}
+
+[data-theme="dark"] .cat-filter-pill:hover,
+[data-theme="dark"] .cat-filter-pill.active {
+  background: var(--champagne-gold);
+  color: #111214;
+  border-color: var(--champagne-gold);
+}
+
+[data-theme="dark"] .product-card,
+[data-theme="dark"] .product-details-box,
+[data-theme="dark"] .shopping-bag-drawer,
+[data-theme="dark"] .filter-sidebar-drawer,
+[data-theme="dark"] .quick-view-dialog,
+[data-theme="dark"] .search-overlay,
+[data-theme="dark"] .pairing-look-card,
+[data-theme="dark"] .philosophy-quote-box,
+[data-theme="dark"] .philosophy-media-card,
+[data-theme="dark"] .contact-card-box,
+[data-theme="dark"] .faq-accordion-item,
+[data-theme="dark"] .faq-accordion-btn,
+[data-theme="dark"] .faq-accordion-body {
+  background-color: #1A1D21 !important;
+  color: #E6E4DD !important;
+  border-color: rgba(185, 154, 101, 0.22) !important;
+}
+
+[data-theme="dark"] .faq-accordion-btn:not(.collapsed) {
+  background: #24272D !important;
+  color: var(--champagne-gold) !important;
+}
+
+[data-theme="dark"] .form-control-vestaro {
+  background-color: #15171A !important;
+  color: #F5F1E9 !important;
+  border-color: rgba(185, 154, 101, 0.25) !important;
+}
+
+[data-theme="dark"] .btn-vestaro-outline-dark {
+  border-color: var(--champagne-gold);
+  color: var(--champagne-gold);
+}
+
+[data-theme="dark"] .btn-vestaro-outline-dark:hover {
+  background-color: var(--champagne-gold);
+  color: #111214;
+}
+
+[data-theme="dark"] .btn-vestaro-dark {
+  background-color: var(--champagne-gold);
+  color: #111214;
+}
+
+[data-theme="dark"] .btn-vestaro-dark:hover {
+  background-color: #A3844D;
+  color: #111214;
+}
+
+[data-theme="dark"] .hero-triptych-card {
+  background: rgba(22, 24, 27, 0.9);
+}
+
+/* ==========================================================================
+   RTL TEXT DIRECTION [dir="rtl"]
+   ========================================================================== */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .mobile-menu-drawer,
+[dir="rtl"] .shopping-bag-drawer,
+[dir="rtl"] .filter-sidebar-drawer {
+  right: auto;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] .mobile-menu-drawer.open,
+[dir="rtl"] .shopping-bag-drawer.open,
+[dir="rtl"] .filter-sidebar-drawer.open {
+  transform: translateX(0);
+}
+
+[dir="rtl"] .back-to-top-btn {
+  right: auto;
+  left: 28px;
+}
+
+[dir="rtl"] .vestaro-toast {
+  right: auto;
+  left: 1.5rem;
+  border-left: none;
+  border-right: 4px solid var(--champagne-gold);
+}
+
+[dir="rtl"] .faq-question {
+  text-align: right;
+}
+
+[dir="rtl"] .faq-accordion-body {
+  padding: 1.25rem 3.5rem 1.5rem 1.5rem;
+}
+
+[dir="rtl"] .me-1, [dir="rtl"] .me-2, [dir="rtl"] .me-3 {
+  margin-right: 0 !important;
+}
+[dir="rtl"] .me-1 { margin-left: 0.25rem !important; }
+[dir="rtl"] .me-2 { margin-left: 0.5rem !important; }
+[dir="rtl"] .me-3 { margin-left: 1rem !important; }
+
+[dir="rtl"] .ms-1, [dir="rtl"] .ms-2, [dir="rtl"] .ms-3 {
+  margin-left: 0 !important;
+}
+[dir="rtl"] .ms-1 { margin-right: 0.25rem !important; }
+[dir="rtl"] .ms-2 { margin-right: 0.5rem !important; }
+[dir="rtl"] .ms-3 { margin-right: 1rem !important; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

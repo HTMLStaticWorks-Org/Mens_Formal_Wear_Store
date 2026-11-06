@@ -1111,6 +1111,95 @@
       this.reset();
     });
 
+    // ========================================================================
+    // THEME (DARK / LIGHT) & RTL CONTROLLER
+    // ========================================================================
+    const THEME_KEY = "vestaro_theme_v1";
+    const DIR_KEY = "vestaro_dir_v1";
+
+    function applyTheme(theme) {
+      const isDark = theme === "dark";
+      if (isDark) {
+        document.documentElement.setAttribute("data-theme", "dark");
+        $(".theme-icon-moon").addClass("d-none");
+        $(".theme-icon-sun").removeClass("d-none");
+        $(".theme-label-text").text("Light Mode");
+      } else {
+        document.documentElement.removeAttribute("data-theme");
+        $(".theme-icon-moon").removeClass("d-none");
+        $(".theme-icon-sun").addClass("d-none");
+        $(".theme-label-text").text("Dark Mode");
+      }
+      try { localStorage.setItem(THEME_KEY, theme); } catch(e) {}
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    function applyRtl(dir) {
+      const isRtl = dir === "rtl";
+      if (isRtl) {
+        document.documentElement.setAttribute("dir", "rtl");
+        $(".rtl-pill-text, .rtl-label-text").text("LTR");
+      } else {
+        document.documentElement.removeAttribute("dir");
+        $(".rtl-pill-text, .rtl-label-text").text("RTL");
+      }
+      try { localStorage.setItem(DIR_KEY, dir); } catch(e) {}
+    }
+
+    // Apply saved preferences immediately
+    try {
+      const savedTheme = localStorage.getItem(THEME_KEY) || "light";
+      const savedDir = localStorage.getItem(DIR_KEY) || "ltr";
+      applyTheme(savedTheme);
+      applyRtl(savedDir);
+    } catch(e) {}
+
+    $(document).on("click", ".js-theme-toggle", function () {
+      const currentTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      const nextTheme = currentTheme === "dark" ? "light" : "dark";
+      applyTheme(nextTheme);
+      window.showVestaroToast(`Switched to ${nextTheme === "dark" ? "Dark" : "Light"} Mode`);
+    });
+
+    $(document).on("click", ".js-rtl-toggle", function () {
+      const currentDir = document.documentElement.getAttribute("dir") === "rtl" ? "rtl" : "ltr";
+      const nextDir = currentDir === "rtl" ? "ltr" : "rtl";
+      applyRtl(nextDir);
+      window.showVestaroToast(`Switched text direction to ${nextDir.toUpperCase()}`);
+    });
+
+    // ========================================================================
+    // BACK TO TOP FLOATING BUTTON
+    // ========================================================================
+    function initBackToTop() {
+      let $btn = $("#backToTopBtn");
+      if (!$btn.length) {
+        $("body").append(`
+          <button type="button" id="backToTopBtn" class="back-to-top-btn" aria-label="Back to Top" title="Back to Top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+          </button>
+        `);
+        $btn = $("#backToTopBtn");
+      }
+
+      $(window).on("scroll", function () {
+        if ($(window).scrollTop() > 300) {
+          $btn.addClass("show");
+        } else {
+          $btn.removeClass("show");
+        }
+      });
+
+      $(document).on("click", "#backToTopBtn", function (e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    }
+    initBackToTop();
+
     if (window.lucide) {
       window.lucide.createIcons();
     }

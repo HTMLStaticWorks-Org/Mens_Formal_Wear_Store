@@ -38,6 +38,15 @@
       </nav>
 
       <div class="desktop-actions">
+        <!-- Theme Toggle -->
+        <button type="button" class="header-icon-btn js-theme-toggle" id="themeToggleBtn" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          <i data-lucide="moon" class="theme-icon-moon" style="width:18px;height:18px;"></i>
+          <i data-lucide="sun" class="theme-icon-sun d-none" style="width:18px;height:18px;"></i>
+        </button>
+        <!-- RTL Toggle -->
+        <button type="button" class="header-icon-btn js-rtl-toggle" id="rtlToggleBtn" aria-label="Toggle RTL Direction" title="Toggle RTL">
+          <span class="rtl-pill-text">RTL</span>
+        </button>
         <button type="button" class="header-icon-btn js-open-search" aria-label="Search Products">
           <i data-lucide="search" style="width:18px;height:18px;"></i>
         </button>
@@ -78,6 +87,17 @@
         <li><a href="contact.html">Contact &amp; Store Visit</a></li>
       </ul>
       <div class="mobile-drawer-utilities">
+        <div class="d-flex gap-2 w-100 mb-2">
+          <button type="button" class="btn-vestaro btn-vestaro-outline-light flex-grow-1 js-theme-toggle" style="min-width:auto;height:42px;padding:0.4rem;font-size:0.75rem;">
+            <i data-lucide="moon" class="theme-icon-moon" style="width:15px;height:15px;"></i>
+            <i data-lucide="sun" class="theme-icon-sun d-none" style="width:15px;height:15px;"></i>
+            <span class="theme-label-text ms-1">Dark Mode</span>
+          </button>
+          <button type="button" class="btn-vestaro btn-vestaro-outline-light flex-grow-1 js-rtl-toggle" style="min-width:auto;height:42px;padding:0.4rem;font-size:0.75rem;">
+            <i data-lucide="languages" style="width:15px;height:15px;"></i>
+            <span class="rtl-label-text ms-1">RTL</span>
+          </button>
+        </div>
         <button type="button" class="btn-vestaro btn-vestaro-outline-light js-open-search">
           <i data-lucide="search" style="width:16px;height:16px;"></i> Search Products
         </button>
@@ -329,7 +349,8 @@
   <footer class="site-footer">
     <div class="container">
       <div class="row g-4 pb-4 border-bottom" style="border-color:rgba(185,154,101,0.2) !important;">
-        <div class="col-lg-4">
+        <!-- Col 1: Brand Identity -->
+        <div class="col-12 col-xl-4 footer-col-brand mb-4 mb-xl-0">
           <a href="index.html" class="brand-logo mb-3">
             <img src="assets/img/logo.svg" alt="VESTARO" />
           </a>
@@ -353,7 +374,7 @@
           </div>
         </div>
 
-        <div class="col-6 col-md-3 col-lg-2">
+        <div class="col-6 col-md-6 col-xl-2 footer-col-links">
           <h4 class="footer-heading">Quick Links</h4>
           <ul class="footer-links">
             <li><a href="index.html">Home 1 – Brand Story</a></li>
@@ -364,7 +385,7 @@
           </ul>
         </div>
 
-        <div class="col-6 col-md-3 col-lg-2">
+        <div class="col-6 col-md-6 col-xl-2 footer-col-links">
           <h4 class="footer-heading">Categories</h4>
           <ul class="footer-links">
             <li><a href="products.html?category=Formal+Shirts">Formal Shirts</a></li>
@@ -376,7 +397,7 @@
           </ul>
         </div>
 
-        <div class="col-6 col-md-3 col-lg-2">
+        <div class="col-6 col-md-6 col-xl-2 footer-col-links">
           <h4 class="footer-heading">House Brands</h4>
           <ul class="footer-links">
             <li><a href="brands.html#vestaro-signature">VESTARO Signature</a></li>
@@ -388,7 +409,7 @@
           </ul>
         </div>
 
-        <div class="col-6 col-md-3 col-lg-2">
+        <div class="col-6 col-md-6 col-xl-2 footer-col-links">
           <h4 class="footer-heading">Flagship Boutique</h4>
           <p class="small mb-2" style="color:#D9D7D2;">
             Suite 104, The Heritage Arcade, Luxury Retail Boulevard
@@ -415,6 +436,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" id="backToTopBtn" class="back-to-top-btn" aria-label="Back to Top" title="Back to Top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>

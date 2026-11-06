@@ -41,6 +41,15 @@
 
       <!-- Right: Desktop Actions (Hidden at <=1024px) -->
       <div class="desktop-actions">
+        <!-- Theme Toggle -->
+        <button type="button" class="header-icon-btn js-theme-toggle" id="themeToggleBtn" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          <i data-lucide="moon" class="theme-icon-moon" style="width:18px;height:18px;"></i>
+          <i data-lucide="sun" class="theme-icon-sun d-none" style="width:18px;height:18px;"></i>
+        </button>
+        <!-- RTL Toggle -->
+        <button type="button" class="header-icon-btn js-rtl-toggle" id="rtlToggleBtn" aria-label="Toggle RTL Direction" title="Toggle RTL">
+          <span class="rtl-pill-text">RTL</span>
+        </button>
         <button type="button" class="header-icon-btn js-open-search" aria-label="Search Products" title="Search Catalogue">
           <i data-lucide="search" style="width:18px;height:18px;"></i>
         </button>
@@ -82,6 +91,17 @@
         <li><a href="contact.html">Contact &amp; Store Visit</a></li>
       </ul>
       <div class="mobile-drawer-utilities">
+        <div class="d-flex gap-2 w-100 mb-2">
+          <button type="button" class="btn-vestaro btn-vestaro-outline-light flex-grow-1 js-theme-toggle" style="min-width:auto;height:42px;padding:0.4rem;font-size:0.75rem;">
+            <i data-lucide="moon" class="theme-icon-moon" style="width:15px;height:15px;"></i>
+            <i data-lucide="sun" class="theme-icon-sun d-none" style="width:15px;height:15px;"></i>
+            <span class="theme-label-text ms-1">Dark Mode</span>
+          </button>
+          <button type="button" class="btn-vestaro btn-vestaro-outline-light flex-grow-1 js-rtl-toggle" style="min-width:auto;height:42px;padding:0.4rem;font-size:0.75rem;">
+            <i data-lucide="languages" style="width:15px;height:15px;"></i>
+            <span class="rtl-label-text ms-1">RTL</span>
+          </button>
+        </div>
         <button type="button" class="btn-vestaro btn-vestaro-outline-light js-open-search">
           <i data-lucide="search" style="width:16px;height:16px;"></i> Search Products
         </button>
@@ -190,26 +210,26 @@
         <div class="col-lg-7" data-aos="fade-left">
           <div class="row g-4 h-100">
             <div class="col-md-6">
-              <div class="bg-white border p-3 h-100 d-flex flex-column justify-content-between">
-                <div style="aspect-ratio:4/5;overflow:hidden;margin-bottom:1rem;">
-                  <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;" poster="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=800&q=85">
+              <div class="philosophy-media-card">
+                <div class="philosophy-media-stage">
+                  <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=800&q=85">
                     <source src="videos/10320260-uhd_2160_3840_25fps.mp4" type="video/mp4" />
                   </video>
                 </div>
-                <div class="text-center">
+                <div class="philosophy-media-caption">
                   <h4 class="serif-heading mb-1" style="font-size:1.35rem;">Precision Architecture</h4>
                   <p class="small text-muted mb-0">Hand-basted canvases and split-yoke shoulders calibrated to drape naturally.</p>
                 </div>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="bg-white border p-3 h-100 d-flex flex-column justify-content-between">
-                <div style="aspect-ratio:4/5;overflow:hidden;margin-bottom:1rem;">
-                  <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;" poster="https://images.unsplash.com/photo-1593032465175-481ac7f401a0?auto=format&fit=crop&w=800&q=85">
+              <div class="philosophy-media-card">
+                <div class="philosophy-media-stage">
+                  <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1593032465175-481ac7f401a0?auto=format&fit=crop&w=800&q=85">
                     <source src="videos/4651577-uhd_2160_4096_30fps.mp4" type="video/mp4" />
                   </video>
                 </div>
-                <div class="text-center">
+                <div class="philosophy-media-caption">
                   <h4 class="serif-heading mb-1" style="font-size:1.35rem;">Modern Professional Dressing</h4>
                   <p class="small text-muted mb-0">Crease-recovery weaves and breathable linings built for 14-hour executive days.</p>
                 </div>
@@ -536,7 +556,7 @@
     <div class="container">
       <div class="row g-4 pb-4 border-bottom" style="border-color:rgba(185,154,101,0.2) !important;">
         <!-- Col 1: Brand Identity -->
-        <div class="col-lg-4">
+        <div class="col-12 col-xl-4 footer-col-brand mb-4 mb-xl-0">
           <a href="index.html" class="brand-logo mb-3">
             <img src="assets/img/logo.svg" alt="VESTARO" />
           </a>
@@ -561,7 +581,7 @@
         </div>
 
         <!-- Col 2: Quick Links -->
-        <div class="col-6 col-md-3 col-lg-2">
+        <div class="col-6 col-md-6 col-xl-2 footer-col-links">
           <h4 class="footer-heading">Quick Links</h4>
           <ul class="footer-links">
             <li><a href="index.html">Home 1 – Brand Story</a></li>
@@ -573,7 +593,7 @@
         </div>
 
         <!-- Col 3: Product Categories -->
-        <div class="col-6 col-md-3 col-lg-2">
+        <div class="col-6 col-md-6 col-xl-2 footer-col-links">
           <h4 class="footer-heading">Categories</h4>
           <ul class="footer-links">
             <li><a href="products.html?category=Formal+Shirts">Formal Shirts</a></li>
@@ -586,7 +606,7 @@
         </div>
 
         <!-- Col 4: Featured Brands -->
-        <div class="col-6 col-md-3 col-lg-2">
+        <div class="col-6 col-md-6 col-xl-2 footer-col-links">
           <h4 class="footer-heading">House Brands</h4>
           <ul class="footer-links">
             <li><a href="brands.html#vestaro-signature">VESTARO Signature</a></li>
@@ -599,7 +619,7 @@
         </div>
 
         <!-- Col 5: Store Contact & Newsletter -->
-        <div class="col-6 col-md-3 col-lg-2">
+        <div class="col-6 col-md-6 col-xl-2 footer-col-links">
           <h4 class="footer-heading">Flagship Boutique</h4>
           <p class="small mb-2" style="color:#D9D7D2;">
             Suite 104, The Heritage Arcade, Luxury Retail Boulevard
@@ -626,6 +646,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" id="backToTopBtn" class="back-to-top-btn" aria-label="Back to Top" title="Back to Top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
 
   <!-- Scripts: jQuery, Bootstrap 5, GSAP + ScrollTrigger, Swiper, AOS, Lucide -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
