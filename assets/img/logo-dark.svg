@@ -8,6 +8,5 @@
   </g>
   <!-- Wordmark -->
   <text x="54" y="27" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" font-size="25" font-weight="600" fill="#111214" letter-spacing="6">VESTARO</text>
-  <text x="55" y="40" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="7.5" font-weight="600" fill="#8C6D3B" letter-spacing="4.2">LONDON • MILANO</text>
+  <text x="55" y="40" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="7.5" font-weight="500" fill="#B99A65" letter-spacing="4.2">LONDON • MILANO</text>
 </svg>
-
