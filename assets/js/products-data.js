@@ -44,7 +44,6 @@ window.VESTARO_BRANDS = [
     eraStyle: "Timeless Italian Bespoke",
     description: "Our flagship house label crafted with full-canvas construction, hand-rolled lapels, mother-of-pearl buttons, and two-ply Egyptian and Sea Island cottons for discerning leaders.",
     image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&h=1000&q=85",
-    video: "videos/10319603-uhd_2160_3840_25fps.mp4",
     featuredCategory: "Business Suits"
   },
   {
@@ -56,7 +55,6 @@ window.VESTARO_BRANDS = [
     eraStyle: "Modern Boardroom Architecture",
     description: "Engineered for high-stakes global executives. Crease-resistant merino wool tailoring and crisp non-iron poplin shirts that stay immaculate from morning flights to evening galas.",
     image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&h=1000&q=85",
-    video: "videos/10320260-uhd_2160_3840_25fps.mp4",
     featuredCategory: "Formal Shirts"
   },
   {
@@ -68,7 +66,6 @@ window.VESTARO_BRANDS = [
     eraStyle: "Classic British Sartorial",
     description: "Inspired by Jermyn Street shirtmaking traditions. Featuring brass collar stays, four-piece split yokes, and structured chest canvases that honor centuries of classic menswear.",
     image: "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=800&h=1000&q=85",
-    video: "videos/4651577-uhd_2160_4096_30fps.mp4",
     featuredCategory: "Regular Fit Shirts"
   },
   {
@@ -80,7 +77,6 @@ window.VESTARO_BRANDS = [
     eraStyle: "Contemporary Metropolitan",
     description: "Designed for the dynamic cosmopolitan gentleman. Clean minimal lines, tapered athletic cuts, and breathable natural-stretch Italian fabrics for effortless day-to-night transitions.",
     image: "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?auto=format&fit=crop&w=800&h=1000&q=85",
-    video: "videos/13801231-uhd_2160_3840_24fps.mp4",
     featuredCategory: "Slim Fit Shirts"
   },
   {
@@ -92,7 +88,6 @@ window.VESTARO_BRANDS = [
     eraStyle: "Ceremonial & Formal Occasionwear",
     description: "Dedicated to black-tie galas, diplomatic receptions, and milestone celebrations. Rich barathea wools, grosgrain silk facings, and double-breasted waistcoats.",
     image: "https://images.unsplash.com/photo-1555069519-127aadedf1ee?auto=format&fit=crop&w=800&h=1000&q=85",
-    video: "videos/6766334-uhd_2160_3840_25fps.mp4",
     featuredCategory: "Waistcoats"
   },
   {
@@ -104,7 +99,6 @@ window.VESTARO_BRANDS = [
     eraStyle: "Elevated Everyday Business",
     description: "The cornerstone of a distinguished five-day rotation. Interlocking colour palettes across shirts, tailored trousers, and full-grain calfskin accessories that pair effortlessly.",
     image: "https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=800&h=1000&q=85",
-    video: "videos/7647327-uhd_2160_3840_24fps.mp4",
     featuredCategory: "Formal Trousers"
   }
 ];
